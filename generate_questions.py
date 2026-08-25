@@ -1,10 +1,12 @@
 """
-Generate 200 difficult Data Communication MCQ questions and write to questions.json.
+Generate difficult Data Communication MCQ questions and write to questions.json.
 Reads lecture_content.json for reference; questions are embedded in QUESTIONS list.
 """
 import json
 import random
 from pathlib import Path
+
+from lecture5_questions import LECTURE5_QUESTIONS
 
 LECTURE_CONTENT_PATH = Path(__file__).parent / "lecture_content.json"
 OUTPUT_PATH = Path(__file__).parent / "questions.json"
@@ -47,7 +49,8 @@ def prepare_questions(seed=42):
 def main():
     _ = load_lecture_reference()
     questions = prepare_questions()
-    assert len(questions) == 200, f"Expected 200 questions, got {len(questions)}"
+    expected = len(QUESTIONS)
+    assert len(questions) == expected, f"Expected {expected} questions, got {len(questions)}"
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(questions, f, indent=2, ensure_ascii=False)
     print(len(questions))
@@ -1454,7 +1457,7 @@ QUESTIONS = [
         "correct": 0,
         "explanation": "Session layer manages sessions—establishment, maintenance, synchronization.",
     },
-]
+] + LECTURE5_QUESTIONS
 
 
 if __name__ == "__main__":

@@ -1,0 +1,98 @@
+[
+  {
+    "page": 1,
+    "text": "UNIVERSITY OF MINES AND TECHNOLOGY\nFACULTY OF COMPUTING AND MATHEMATICS\nDEPARTMENT OF CYBER SECURITY\n\n\nCOURSE NAME – DATA COMMUNICATION\nCOURSE CODE – CY 164\n\nLECTURER NAME – DR SYLVESTER AKPAH\nMOBILE - +233 207541684/244220361\nEMAIL – sakpah@umat.edu.gh"
+  },
+  {
+    "page": 2,
+    "text": "LECTURE FIVE\nCOMPUTER NETWORK MANAGEMENT\n\u000bStudent learning outcomes \n \nAfter going through this lecture, students will be able to:\nDefine Computer Network Management and explain its importance in modern enterprise and organizational environments.\nIdentify the key components of network management\nDescribe common network management protocols\nDifferentiate between centralized and distributed network management architectures."
+  },
+  {
+    "page": 3,
+    "text": "INTRODUCTION TO COMPUTER NETWORK MANAGEMENT\nComputer Network Management is the process of monitoring, administering, maintaining, and securing computer networks to ensure they operate efficiently, reliably, and securely.\nIt involves the use of specialized tools, protocols, policies, and procedures to control and manage network devices such as routers, switches, servers, firewalls, and wireless access points.\nNetwork management typically follows the FCAPS model developed by the international organization for standardization, which includes:\nF – fault management: detecting, isolating, and correcting network problems.\nC – configuration management: managing device settings and network changes.\nA – accounting management: tracking resource usage.\nP – performance management: monitoring speed, traffic, and efficiency.\nS – security management: protecting the network from threats and unauthorized access."
+  },
+  {
+    "page": 4,
+    "text": "IMPORTANCE OF NETWORK MANAGEMENT IN MODERN ENTERPRISES AND ORGANIZATIONS\nIn today’s digital-driven world, organizations depend heavily on their networks for communication, data sharing, cloud services, and business operations. Effective network management is therefore critical for the following reasons:\n1. Ensures network reliability and availability - Businesses rely on continuous connectivity for emails, cloud systems, ERP platforms, and video conferencing. Proper network management minimizes downtime and ensures high availability.\n2. Improves performance and efficiency - By monitoring bandwidth usage, latency, and traffic patterns, organizations can optimize performance and prevent congestion.\n3. Reduces operational costs - Proactive monitoring helps detect issues before they escalate, reducing repair costs and productivity losses caused by outages."
+  },
+  {
+    "page": 5,
+    "text": "IMPORTANCE OF NETWORK MANAGEMENT IN MODERN ENTERPRISES AND ORGANIZATIONS\n4. Enhances security - Modern enterprises face cyber threats such as malware, ransomware, and data breaches. Network management helps implement:\nAccess control policies\nFirewall rules\nIntrusion detection and prevention systems\nContinuous monitoring of suspicious activities\n5. Supports business continuity -Through configuration backups, disaster recovery plans, and redundancy planning, organizations can maintain operations even during failures.\n6. Enables scalability - As organizations grow, network management allows seamless integration of new devices, branches, cloud services, and remote users."
+  },
+  {
+    "page": 6,
+    "text": "IMPORTANCE OF NETWORK MANAGEMENT IN MODERN ENTERPRISES AND ORGANIZATIONS\n7. Provides visibility and control\nAdministrators gain real-time insight into:\nNetwork health\nDevice status\nTraffic flows\nSecurity events\nThis visibility enables informed decision-making.\n\u000bComputer network management is essential for ensuring that enterprise networks remain secure, efficient, scalable, and reliable. In modern organizational environments—where digital infrastructure supports almost every business function—effective network management is not optional; it is a strategic necessity."
+  },
+  {
+    "page": 7,
+    "text": "KEY COMPONENTS OF NETWORK MANAGEMENT\n1. Network devices are the physical and virtual devices that form the backbone of a network. They generate, forward, secure, and manage data traffic.\nA) routers\nConnect different networks (e.g., LAN to WAN/internet).\nDirect data packets based on IP addresses.\nOften support routing protocols and traffic filtering.\nB) switches\nConnect devices within a local area network (LAN).\nForward data based on mac addresses.\nSupport vlans, port security, and traffic monitoring."
+  },
+  {
+    "page": 8,
+    "text": "KEY COMPONENTS OF NETWORK MANAGEMENT\nC) servers\nProvide shared services such as:\nFile storage\nEmail\nDatabases\nWeb hosting\nExamples include:\nWindows server\nLinux\nD) firewalls\nProtect networks by filtering incoming and outgoing traffic.\nEnforce security policies.\nCan be hardware-based or software-based.\nThese devices must be continuously monitored and configured to ensure performance, reliability, and security."
+  },
+  {
+    "page": 9,
+    "text": "NETWORK MANAGEMENT SYSTEMS (NMS)\nA Network Management System (NMS) is a software platform used by network administrators to monitor, manage, and control network infrastructure from a centralized location. It provides visibility into network performance, detects faults, and helps ensure smooth operation of network services.\n\nKey functions of an NMS\nAn NMS performs several critical tasks:\nMonitoring – tracks network devices and traffic in real time\nFault detection – identifies failures and alerts administrators\nConfiguration management – manages device settings remotely\nPerformance analysis – measures bandwidth, latency, uptime\nSecurity monitoring – detects suspicious activities"
+  },
+  {
+    "page": 10,
+    "text": "CORE COMPONENTS OF AN NMS\n1. Management server - The central system that collects and processes network data\n2. Managed devices - Network elements such as: Routers, Switches, Servers, Firewalls\n3. Agents - Software installed on devices to send data to the NMS\n4. Management protocols - Communication standards used by NMS:\nSNMP (simple network management protocol) – most common\nICMP – used for diagnostics\nNetflow – traffic analysis"
+  },
+  {
+    "page": 11,
+    "text": "TYPES OF NMS - CENTRALIZED NMS\nNetwork management systems can be classified based on architecture, deployment, and functionality. Each type is suited for different network sizes and organizational needs.\n1.Centralized NMS - A centralized NMS uses a single management server to monitor and control the entire network.\nCharacteristics\nOne central control point\nAll devices report to a single server\nEasier to manage and maintain\nAdvantages\nSimple setup and administration\nLower cost for small networks\nUnified monitoring dashboard\nDisadvantages\nSingle point of failure\nLimited scalability for large networks\nBest For:\nSmall to medium organizations"
+  },
+  {
+    "page": 12,
+    "text": "TYPES OF NMS - DISTRIBUTED NMS\nA distributed NMS uses multiple management servers located in different network segments.\nCharacteristics\nEach server manages a portion of the network\nData may be aggregated to a central system\nAdvantages\nHigh scalability\nFault tolerance (no single point of failure)\nBetter performance for large networks\nDisadvantages\nMore complex to configure\nHigher cost\nBest For:\nLarge Enterprises and Telecom Networks"
+  },
+  {
+    "page": 13,
+    "text": "TYPES OF NMS – CLOUD-BASED NMS\nA Cloud-Based NMS is hosted on the internet and accessed via a web interface.⚙️ \nCharacteristics:\nNo on-premise installation required\nManaged remotely via browser\nAdvantages\nAccessible from anywhere\nEasy scalability\nReduced hardware costs\nDisadvantages\nDepends on internet connectivity\nPotential security concerns\nBest For:\nRemote organizations\nBusinesses with multiple branches"
+  },
+  {
+    "page": 14,
+    "text": "TYPES OF NMS – ON-PREMISES NMS\nInstalled and operated within an organization’s local infrastructure. Characteristics:\nFull control over system and data\nHosted on local servers\nAdvantages\nHigher data security\nCustomization flexibility\nDisadvantages\nExpensive setup and maintenance\nRequires IT expertise\nBest For:\nRemote organizations\nBusinesses with multiple branches"
+  },
+  {
+    "page": 15,
+    "text": "FEATURES OF A GOOD NMS\nReal-time monitoring dashboards\nAutomated alerts and notifications\nNetwork mapping and visualization\nReporting and analytics\nRemote configuration capabilities\nScalability for large networks\nBENEFITS OF USING AN NMS\nEarly detection of network problems\nReduced downtime\nImproved network performance\nEnhanced security monitoring\nSimplified network administration"
+  },
+  {
+    "page": 16,
+    "text": "NETWORK MANAGEMENT TOOLS\nNetwork Management Tools are software applications used to monitor, analyze, configure, and secure computer networks. They are essential components of a Network Management System (NMS) and help administrators maintain efficient network operations.\n\nPurpose of Network Management Tools\nMonitor network performance in real time\nDetect and troubleshoot faults\nConfigure and manage network devices\nEnhance network security\nAnalyze traffic and usage patterns"
+  },
+  {
+    "page": 17,
+    "text": "CATEGORIES OF NETWORK MANAGEMENT TOOLS\nMonitoring Tools\nUsed to observe network performance, uptime, and device health.\nExamples:\nNagios - It focuses on monitoring system health and alerting administrators when issues occur.\nZabbix - Zabbix is a modern, all-in-one monitoring solution designed for real-time monitoring, visualization, and automation.\nPRTG Network Monitor - It is designed to monitor network performance, devices, traffic, and applications in real time using a centralized system.\nFunctions:\nDevice status monitoring\nAlert generation\nPerformance tracking"
+  },
+  {
+    "page": 18,
+    "text": "CATEGORIES OF NETWORK MANAGEMENT TOOLS CON’T\nPacket Analysis Tools\nUsed to capture and inspect network packets for troubleshooting and security.\nExamples:\nWireshark - Widely used network protocol analyzer (packet sniffer) that allows you to capture and examine network traffic in real time. It is essential for network troubleshooting, analysis, and security investigations.\nTcpdump - Is a powerful command-line network packet analyzer used to capture and analyze network traffic in real time. It is widely used by network administrators for troubleshooting, debugging, and security monitoring, especially on linux and unix systems.\nFunctions:\nDeep packet inspection\nProtocol analysis\nIdentifying network anomalies"
+  },
+  {
+    "page": 19,
+    "text": "CATEGORIES OF NETWORK MANAGEMENT TOOLS CON’T\nConfiguration Management Tools\nUsed to automate and manage network device configurations.\nExamples:\nAnsible - Ansible is an agentless automation tool that uses simple, human-readable scripts to automate IT tasks such as configuration, deployment, and orchestration.\nPuppet - Puppet is a model-driven configuration management tool that uses agents installed on devices to maintain system configurations automatically.\nFunctions:\nAutomated configuration updates\nBackup and restore configurations\nPolicy enforcement"
+  },
+  {
+    "page": 20,
+    "text": "CATEGORIES OF NETWORK MANAGEMENT TOOLS CON’T\nPerformance Management Tools\nFocused on analyzing bandwidth, latency, and throughput.\nExamples:\nSolarWinds Network Performance Monitor - Is an enterprise-grade network monitoring and management tool developed by solarwinds. It is designed to provide real-time visibility into network performance, availability, and health.\nManageEngine OpManager - Is a comprehensive network monitoring and management tool developed by manageengine. It is designed to provide real-time monitoring, fault management, and performance analysis for network infrastructure\nFunctions:\nBandwidth Monitoring\nTraffic Analysis\nCapacity Planning"
+  },
+  {
+    "page": 21,
+    "text": "CATEGORIES OF NETWORK MANAGEMENT TOOLS CON’T\nSecurity Management Tools\nProtect networks from threats and unauthorized access.\nExamples:\nSnort - is an intrusion detection system (IDS) and intrusion prevention system (IPS) used to monitor network traffic and detect malicious activity in real time.\nSplunk - Is a powerful security information and event management (SIEM) platform used to collect, analyze, and visualize machine data from across an organization.\nFunctions:\nIntrusion detection and prevention\nLog monitoring\nThreat analysis"
+  },
+  {
+    "page": 22,
+    "text": "CATEGORIES OF NETWORK MANAGEMENT TOOLS CON’T\nTraffic Analysis Tools\nAnalyze network traffic patterns and flow behavior.\nExamples:\nNetFlow Analyzer - Is a flow-based monitoring tool that analyzes network traffic using technologies like netflow, sflow, IPFIX, and j-flow.\nNtopng - is an open-source traffic monitoring and analysis tool that provides real-time visibility into network usage via a web interface.\nFunctions:\nTraffic visualization\nBandwidth usage tracking\nDetecting unusual traffic"
+  },
+  {
+    "page": 23,
+    "text": "KEY FEATURES OF NETWORK MANAGEMENT TOOLS\nReal-time monitoring\nAutomated alerts and notifications\nReporting and analytics\nRemote access and control\nScalability"
+  },
+  {
+    "page": 24,
+    "text": "THANK YOU"
+  }
+]

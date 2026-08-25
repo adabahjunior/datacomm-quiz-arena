@@ -2598,5 +2598,655 @@
     ],
     "correct": 3,
     "explanation": "Session layer manages sessions—establishment, maintenance, synchronization."
+  },
+  {
+    "id": 201,
+    "lecture": "Lecture 5",
+    "question": "Computer Network Management is best defined as the process of:",
+    "options": [
+      "Monitoring, administering, maintaining, and securing networks for efficient reliable secure operation",
+      "Installing cables and terminating RJ-45 connectors only",
+      "Writing application software unrelated to infrastructure",
+      "Replacing hardware annually regardless of health"
+    ],
+    "correct": 0,
+    "explanation": "Lecture 5 defines network management as monitoring, administering, maintaining, and securing networks using tools, protocols, policies, and procedures."
+  },
+  {
+    "id": 202,
+    "lecture": "Lecture 5",
+    "question": "In the FCAPS model developed by ISO, what does the 'F' represent?",
+    "options": [
+      "Firewall management",
+      "Flow control management",
+      "Fault management",
+      "Fiber management"
+    ],
+    "correct": 2,
+    "explanation": "FCAPS: Fault, Configuration, Accounting, Performance, Security. Fault management detects, isolates, and corrects network problems."
+  },
+  {
+    "id": 203,
+    "lecture": "Lecture 5",
+    "question": "Configuration management within FCAPS primarily involves:",
+    "options": [
+      "Encrypting all emails at rest",
+      "Managing device settings and network changes",
+      "Replacing failed power supplies automatically",
+      "Counting bytes transferred per user only"
+    ],
+    "correct": 1,
+    "explanation": "Configuration management handles device settings and controlled network changes."
+  },
+  {
+    "id": 204,
+    "lecture": "Lecture 5",
+    "question": "Accounting management in FCAPS is concerned with:",
+    "options": [
+      "Designing website layouts",
+      "Assigning MAC addresses",
+      "Detecting cable breaks",
+      "Tracking resource usage"
+    ],
+    "correct": 3,
+    "explanation": "Accounting management tracks how network resources are consumed."
+  },
+  {
+    "id": 205,
+    "lecture": "Lecture 5",
+    "question": "Performance management under FCAPS focuses on monitoring:",
+    "options": [
+      "Employee attendance only",
+      "Speed, traffic, and efficiency",
+      "Software licensing keys",
+      "Printer toner levels exclusively"
+    ],
+    "correct": 1,
+    "explanation": "Performance management monitors speed, traffic patterns, and overall network efficiency."
+  },
+  {
+    "id": 206,
+    "lecture": "Lecture 5",
+    "question": "Security management in FCAPS aims to:",
+    "options": [
+      "Maximize raw bandwidth at any security cost",
+      "Remove firewalls to reduce latency",
+      "Disable all logging for privacy",
+      "Protect the network from threats and unauthorized access"
+    ],
+    "correct": 3,
+    "explanation": "Security management protects against threats and unauthorized access."
+  },
+  {
+    "id": 207,
+    "lecture": "Lecture 5",
+    "question": "Which FCAPS area would isolate a failing switch port and alert administrators?",
+    "options": [
+      "Security management exclusively",
+      "Accounting management",
+      "Configuration management only without detection",
+      "Fault management"
+    ],
+    "correct": 3,
+    "explanation": "Fault management detects, isolates, and corrects network problems including device failures."
+  },
+  {
+    "id": 208,
+    "lecture": "Lecture 5",
+    "question": "Network management devices explicitly listed in Lecture 5 include all EXCEPT:",
+    "options": [
+      "Routers",
+      "Wireless access points",
+      "Firewalls",
+      "Repeaters as the primary management focus"
+    ],
+    "correct": 3,
+    "explanation": "Lecture 5 lists routers, switches, servers, firewalls, and wireless APs; repeaters are not emphasized as managed devices here."
+  },
+  {
+    "id": 209,
+    "lecture": "Lecture 5",
+    "question": "Proactive network monitoring primarily helps organizations:",
+    "options": [
+      "Detect issues before they escalate, reducing repair costs and outage losses",
+      "Eliminate the need for any security policies",
+      "Remove disaster recovery planning",
+      "Avoid all bandwidth monitoring"
+    ],
+    "correct": 0,
+    "explanation": "Proactive monitoring detects problems early, cutting operational costs and productivity losses from outages."
+  },
+  {
+    "id": 210,
+    "lecture": "Lecture 5",
+    "question": "Which enterprise benefit ties configuration backups, disaster recovery, and redundancy planning together?",
+    "options": [
+      "Eliminates need for firewalls",
+      "Accounting management only",
+      "Supports business continuity",
+      "Reduces cable length"
+    ],
+    "correct": 2,
+    "explanation": "Business continuity is supported through backups, DR plans, and redundancy so operations continue during failures."
+  },
+  {
+    "id": 211,
+    "lecture": "Lecture 5",
+    "question": "Visibility and control in network management gives administrators real-time insight into all EXCEPT:",
+    "options": [
+      "Security events",
+      "Traffic flows",
+      "Network health",
+      "Employee salary grades"
+    ],
+    "correct": 3,
+    "explanation": "Visibility covers network health, device status, traffic flows, and security events—not HR payroll data."
+  },
+  {
+    "id": 212,
+    "lecture": "Lecture 5",
+    "question": "Routers in managed networks primarily:",
+    "options": [
+      "Capture packets for protocol analysis by default",
+      "Store user files for shared access",
+      "Forward frames within a LAN using MAC addresses only",
+      "Connect different networks and direct packets based on IP addresses"
+    ],
+    "correct": 3,
+    "explanation": "Routers interconnect networks (e.g., LAN to WAN) and route by IP, often supporting routing protocols and filtering."
+  },
+  {
+    "id": 213,
+    "lecture": "Lecture 5",
+    "question": "Managed switches in Lecture 5 are described as forwarding data based on:",
+    "options": [
+      "IP addresses globally",
+      "MAC addresses",
+      "URL hostnames",
+      "FTP session IDs"
+    ],
+    "correct": 1,
+    "explanation": "Switches connect LAN devices and forward using MAC addresses; they may support VLANs and port security."
+  },
+  {
+    "id": 214,
+    "lecture": "Lecture 5",
+    "question": "Which switch capabilities are highlighted for network management contexts?",
+    "options": [
+      "DNS registration",
+      "Satellite uplink modulation only",
+      "VLANs, port security, and traffic monitoring",
+      "HTML rendering"
+    ],
+    "correct": 2,
+    "explanation": "Switches support VLANs, port security, and traffic monitoring per Lecture 5."
+  },
+  {
+    "id": 215,
+    "lecture": "Lecture 5",
+    "question": "Servers in network management provide shared services such as:",
+    "options": [
+      "File storage, email, databases, and web hosting",
+      "MAC address manufacturing",
+      "Only physical cable testing",
+      "Optical fiber splicing"
+    ],
+    "correct": 0,
+    "explanation": "Servers deliver shared services including files, email, databases, and web hosting (Windows Server, Linux, etc.)."
+  },
+  {
+    "id": 216,
+    "lecture": "Lecture 5",
+    "question": "Firewalls in a managed network:",
+    "options": [
+      "Replace routers for all WAN connectivity",
+      "Filter incoming/outgoing traffic and enforce security policies",
+      "Regenerate signals at the physical layer only",
+      "Assign DHCP leases exclusively"
+    ],
+    "correct": 1,
+    "explanation": "Firewalls filter traffic and enforce policies; they may be hardware- or software-based."
+  },
+  {
+    "id": 217,
+    "lecture": "Lecture 5",
+    "question": "A Network Management System (NMS) is best described as:",
+    "options": [
+      "A peer-to-peer file sharing protocol",
+      "An OSI layer 1 repeater",
+      "A type of UTP cable category",
+      "Software platform for monitoring, managing, and controlling infrastructure centrally"
+    ],
+    "correct": 3,
+    "explanation": "NMS is administrator software providing centralized visibility, fault detection, and control."
+  },
+  {
+    "id": 218,
+    "lecture": "Lecture 5",
+    "question": "Which is NOT listed as a key NMS function in Lecture 5?",
+    "options": [
+      "Word processing document editing",
+      "Fault detection and alerting",
+      "Performance analysis of bandwidth and latency",
+      "Monitoring devices and traffic"
+    ],
+    "correct": 0,
+    "explanation": "NMS functions include monitoring, fault detection, configuration management, performance analysis, and security monitoring."
+  },
+  {
+    "id": 219,
+    "lecture": "Lecture 5",
+    "question": "In NMS architecture, agents are:",
+    "options": [
+      "Backup generators for data centers",
+      "Physical cables connecting floors",
+      "Software on managed devices that send data to the management server",
+      "End-user web browsers only"
+    ],
+    "correct": 2,
+    "explanation": "Agents are installed on managed devices to report data to the NMS management server."
+  },
+  {
+    "id": 220,
+    "lecture": "Lecture 5",
+    "question": "The most common management protocol cited for NMS communication is:",
+    "options": [
+      "SMTP for all device polling",
+      "HTTP only",
+      "SNMP",
+      "FTP exclusively"
+    ],
+    "correct": 2,
+    "explanation": "SNMP (Simple Network Management Protocol) is the most common NMS protocol listed."
+  },
+  {
+    "id": 221,
+    "lecture": "Lecture 5",
+    "question": "ICMP in network management is primarily used for:",
+    "options": [
+      "Diagnostics",
+      "Configuration backup storage",
+      "Email relay",
+      "Traffic flow export analysis"
+    ],
+    "correct": 0,
+    "explanation": "ICMP supports diagnostic functions such as reachability testing (e.g., ping)."
+  },
+  {
+    "id": 222,
+    "lecture": "Lecture 5",
+    "question": "NetFlow in the NMS context is associated with:",
+    "options": [
+      "Traffic analysis",
+      "Presentation-layer encryption",
+      "Fault isolation at layer 1 only",
+      "MAC address assignment"
+    ],
+    "correct": 0,
+    "explanation": "NetFlow is listed as a management protocol/tooling area for traffic analysis."
+  },
+  {
+    "id": 223,
+    "lecture": "Lecture 5",
+    "question": "A centralized NMS characteristic that creates operational risk is:",
+    "options": [
+      "Too many management servers",
+      "Inability to use a unified dashboard",
+      "Mandatory geographic distribution",
+      "Single point of failure"
+    ],
+    "correct": 3,
+    "explanation": "Centralized NMS uses one server—all devices report to it, creating a single point of failure."
+  },
+  {
+    "id": 224,
+    "lecture": "Lecture 5",
+    "question": "Centralized NMS is best suited for:",
+    "options": [
+      "Satellite-only networks without servers",
+      "Large telecom backbone only",
+      "Networks requiring mandatory multi-server fault tolerance",
+      "Small to medium organizations"
+    ],
+    "correct": 3,
+    "explanation": "Centralized NMS advantages include simple setup and lower cost—ideal for small/medium orgs."
+  },
+  {
+    "id": 225,
+    "lecture": "Lecture 5",
+    "question": "Distributed NMS primarily improves:",
+    "options": [
+      "Simplicity for tiny home LANs",
+      "Scalability and fault tolerance",
+      "Elimination of all management servers",
+      "Removal of monitoring agents"
+    ],
+    "correct": 1,
+    "explanation": "Distributed NMS uses multiple servers across segments—high scalability, no single point of failure."
+  },
+  {
+    "id": 226,
+    "lecture": "Lecture 5",
+    "question": "Distributed NMS is best for:",
+    "options": [
+      "Large enterprises and telecom networks",
+      "Single-room Bluetooth PAN only",
+      "Networks with no segmentation",
+      "Organizations avoiding all management costs"
+    ],
+    "correct": 0,
+    "explanation": "Distributed architecture suits large enterprises and telecom where scale and resilience matter."
+  },
+  {
+    "id": 227,
+    "lecture": "Lecture 5",
+    "question": "Cloud-Based NMS is accessed via:",
+    "options": [
+      "Only serial console cables",
+      "Exclusive infrared line-of-sight",
+      "Web interface over the internet",
+      "Manual paper logbooks"
+    ],
+    "correct": 2,
+    "explanation": "Cloud-Based NMS is hosted online and managed remotely through a browser."
+  },
+  {
+    "id": 228,
+    "lecture": "Lecture 5",
+    "question": "A key disadvantage of Cloud-Based NMS noted in Lecture 5 is:",
+    "options": [
+      "Prohibition of remote access",
+      "Mandatory on-premise server farms",
+      "Dependence on internet connectivity",
+      "Inability to scale"
+    ],
+    "correct": 2,
+    "explanation": "Cloud NMS depends on internet connectivity and may raise security concerns."
+  },
+  {
+    "id": 229,
+    "lecture": "Lecture 5",
+    "question": "On-Premises NMS offers which advantage over typical cloud deployment?",
+    "options": [
+      "Higher data security and full local control",
+      "No hardware costs ever",
+      "Automatic immunity from maintenance",
+      "Zero IT expertise required"
+    ],
+    "correct": 0,
+    "explanation": "On-premises NMS runs on local infrastructure with full control and typically higher data security."
+  },
+  {
+    "id": 230,
+    "lecture": "Lecture 5",
+    "question": "On-Premises NMS disadvantages include:",
+    "options": [
+      "Expensive setup/maintenance and need for IT expertise",
+      "No customization possible",
+      "Mandatory cloud-only access",
+      "Inability to secure data locally"
+    ],
+    "correct": 0,
+    "explanation": "On-prem NMS costs more to deploy/maintain and requires skilled IT staff."
+  },
+  {
+    "id": 231,
+    "lecture": "Lecture 5",
+    "question": "Which feature is listed for a good NMS?",
+    "options": [
+      "Network mapping and visualization",
+      "Exclusive use of half-duplex links",
+      "Removal of all alerting",
+      "Manual-only configuration with no remote access"
+    ],
+    "correct": 0,
+    "explanation": "Good NMS features include real-time dashboards, alerts, network mapping, reporting, remote config, and scalability."
+  },
+  {
+    "id": 232,
+    "lecture": "Lecture 5",
+    "question": "Using an NMS helps achieve all EXCEPT:",
+    "options": [
+      "Guaranteed elimination of all cyber threats forever",
+      "Early problem detection",
+      "Simplified administration",
+      "Reduced downtime"
+    ],
+    "correct": 0,
+    "explanation": "NMS benefits include early detection, less downtime, better performance, security monitoring, and simplified admin—not absolute threat elimination."
+  },
+  {
+    "id": 233,
+    "lecture": "Lecture 5",
+    "question": "Nagios is categorized in Lecture 5 as a:",
+    "options": [
+      "Monitoring tool focused on health alerts",
+      "Traffic flow exporter only",
+      "Packet analysis sniffer",
+      "SIEM platform exclusively"
+    ],
+    "correct": 0,
+    "explanation": "Nagios monitors system health and alerts administrators when issues occur."
+  },
+  {
+    "id": 234,
+    "lecture": "Lecture 5",
+    "question": "Zabbix is described as:",
+    "options": [
+      "An infrared remote protocol",
+      "A coaxial cable standard",
+      "A modern all-in-one monitoring solution for real-time monitoring, visualization, and automation",
+      "A layer-1 repeater vendor"
+    ],
+    "correct": 2,
+    "explanation": "Zabbix provides real-time monitoring, visualization, and automation in one platform."
+  },
+  {
+    "id": 235,
+    "lecture": "Lecture 5",
+    "question": "PRTG Network Monitor specializes in:",
+    "options": [
+      "Only DNS registration",
+      "Desktop word processing",
+      "Real-time monitoring of network performance, devices, traffic, and applications centrally",
+      "Fiber optic splicing guides"
+    ],
+    "correct": 2,
+    "explanation": "PRTG monitors performance, devices, traffic, and applications in real time via a centralized system."
+  },
+  {
+    "id": 236,
+    "lecture": "Lecture 5",
+    "question": "Wireshark is primarily used for:",
+    "options": [
+      "Hosting corporate email databases",
+      "Routing IP packets between autonomous systems",
+      "Capturing and examining network traffic (packet analysis) in real time",
+      "Automating switch VLAN assignments agentlessly"
+    ],
+    "correct": 2,
+    "explanation": "Wireshark is a protocol analyzer/packet sniffer for troubleshooting, analysis, and security investigations."
+  },
+  {
+    "id": 237,
+    "lecture": "Lecture 5",
+    "question": "Tcpdump differs from Wireshark mainly because it is:",
+    "options": [
+      "A command-line packet analyzer widely used on Linux/Unix",
+      "A GUI-only Windows monitoring dashboard",
+      "A cloud NMS with no capture ability",
+      "A hardware firewall appliance"
+    ],
+    "correct": 0,
+    "explanation": "Tcpdump is a powerful CLI packet analyzer for Linux/Unix troubleshooting and security monitoring."
+  },
+  {
+    "id": 238,
+    "lecture": "Lecture 5",
+    "question": "Deep packet inspection and protocol analysis are functions of:",
+    "options": [
+      "Configuration tools like Ansible only",
+      "Monitoring tools like Nagios only",
+      "Performance tools like NetFlow Analyzer exclusively without capture",
+      "Packet analysis tools"
+    ],
+    "correct": 3,
+    "explanation": "Packet analysis tools (Wireshark, Tcpdump) perform DPI, protocol analysis, and anomaly identification."
+  },
+  {
+    "id": 239,
+    "lecture": "Lecture 5",
+    "question": "Ansible is characterized in Lecture 5 as:",
+    "options": [
+      "An IDS/IPS for inline blocking only",
+      "An agentless automation tool using human-readable scripts for configuration and orchestration",
+      "A flow-based analyzer using NetFlow records exclusively",
+      "A model-driven tool requiring agents on every device like Puppet"
+    ],
+    "correct": 1,
+    "explanation": "Ansible is agentless automation with readable scripts for config, deployment, and orchestration."
+  },
+  {
+    "id": 240,
+    "lecture": "Lecture 5",
+    "question": "Puppet differs from Ansible because Puppet is:",
+    "options": [
+      "Agentless and script-only with no device-side software",
+      "A satellite communication protocol",
+      "Model-driven and uses agents on devices to maintain configurations",
+      "A packet sniffer for Wi-Fi only"
+    ],
+    "correct": 2,
+    "explanation": "Puppet is model-driven configuration management using agents to enforce desired state."
+  },
+  {
+    "id": 241,
+    "lecture": "Lecture 5",
+    "question": "Configuration management tools perform all EXCEPT:",
+    "options": [
+      "Automated configuration updates",
+      "Policy enforcement",
+      "Capturing live packets for protocol decode by default",
+      "Backup and restore of configurations"
+    ],
+    "correct": 2,
+    "explanation": "Config tools (Ansible, Puppet) automate updates, backup/restore, and policy enforcement—not primary packet capture."
+  },
+  {
+    "id": 242,
+    "lecture": "Lecture 5",
+    "question": "SolarWinds Network Performance Monitor is focused on:",
+    "options": [
+      "Only intrusion prevention inline",
+      "Enterprise-grade real-time visibility into performance, availability, and health",
+      "MAC address manufacturing",
+      "Manual cable labeling"
+    ],
+    "correct": 1,
+    "explanation": "SolarWinds NPM provides enterprise real-time network performance and availability visibility."
+  },
+  {
+    "id": 243,
+    "lecture": "Lecture 5",
+    "question": "ManageEngine OpManager provides:",
+    "options": [
+      "Only DNS caching",
+      "Exclusive Bluetooth PAN management",
+      "Real-time monitoring, fault management, and performance analysis",
+      "Physical layer signal regeneration"
+    ],
+    "correct": 2,
+    "explanation": "OpManager offers monitoring, fault management, and performance analysis for infrastructure."
+  },
+  {
+    "id": 244,
+    "lecture": "Lecture 5",
+    "question": "Performance management tools analyze primarily:",
+    "options": [
+      "Bandwidth, latency, and throughput",
+      "Printer font choices",
+      "Employee leave schedules",
+      "Desktop wallpaper settings"
+    ],
+    "correct": 0,
+    "explanation": "Performance tools focus on bandwidth, latency, throughput, traffic analysis, and capacity planning."
+  },
+  {
+    "id": 245,
+    "lecture": "Lecture 5",
+    "question": "Snort is classified as:",
+    "options": [
+      "A DNS server",
+      "An IDS/IPS for monitoring traffic and detecting malicious activity",
+      "A configuration backup tool",
+      "A fiber optic tester"
+    ],
+    "correct": 1,
+    "explanation": "Snort is an intrusion detection/prevention system for real-time malicious activity detection."
+  },
+  {
+    "id": 246,
+    "lecture": "Lecture 5",
+    "question": "Splunk in Lecture 5 is described as:",
+    "options": [
+      "A twisted-pair cable category",
+      "A VLAN trunking protocol",
+      "A simple ping utility only",
+      "A SIEM platform collecting and analyzing machine data organization-wide"
+    ],
+    "correct": 3,
+    "explanation": "Splunk is a SIEM platform for collecting, analyzing, and visualizing machine/log data."
+  },
+  {
+    "id": 247,
+    "lecture": "Lecture 5",
+    "question": "Security management tools provide functions such as:",
+    "options": [
+      "Exclusive DHCP lease assignment",
+      "Only VLAN creation without logging",
+      "Physical cable crimping guides",
+      "Intrusion detection/prevention, log monitoring, and threat analysis"
+    ],
+    "correct": 3,
+    "explanation": "Security tools (Snort, Splunk) support IDS/IPS, log monitoring, and threat analysis."
+  },
+  {
+    "id": 248,
+    "lecture": "Lecture 5",
+    "question": "NetFlow Analyzer uses flow technologies such as:",
+    "options": [
+      "Only ICMP echo requests",
+      "Only SMTP message headers",
+      "NetFlow, sFlow, IPFIX, and J-Flow",
+      "Infrared remote bursts"
+    ],
+    "correct": 2,
+    "explanation": "NetFlow Analyzer analyzes traffic using flow export technologies like NetFlow, sFlow, IPFIX, J-Flow."
+  },
+  {
+    "id": 249,
+    "lecture": "Lecture 5",
+    "question": "Ntopng provides:",
+    "options": [
+      "On-premises-only satellite uplink control",
+      "Exclusive MAC-layer encryption",
+      "Open-source real-time traffic monitoring and analysis via a web interface",
+      "Agentless Ansible playbooks only"
+    ],
+    "correct": 2,
+    "explanation": "Ntopng is open-source traffic monitoring/analysis with web-based real-time visibility."
+  },
+  {
+    "id": 250,
+    "lecture": "Lecture 5",
+    "question": "Effective network management in modern enterprises is described as:",
+    "options": [
+      "Optional for organizations using email only occasionally",
+      "Required only for physical cable installation teams",
+      "Unrelated to business continuity or security",
+      "A strategic necessity, not optional, for secure efficient scalable reliable networks"
+    ],
+    "correct": 3,
+    "explanation": "Lecture 5 concludes effective network management is a strategic necessity where digital infrastructure supports nearly every business function."
   }
 ]

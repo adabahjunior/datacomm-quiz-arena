@@ -10,6 +10,7 @@ FILES = [
     ("Lecture 2", r"C:\Users\l\Downloads\LECTURE 2.pdf"),
     ("Lecture 3", r"C:\Users\l\Documents\DATA COMM LECTURE 3 NEW.pptx"),
     ("Lecture 4", r"C:\Users\l\Downloads\DATA COMM LECTURE 4.pdf"),
+    ("Lecture 5", r"C:\Users\l\Documents\DATA COMM LECTURE 5.pptx"),
 ]
 
 def extract_pdf(path):
