@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DataComm Quiz Arena 🚀</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <style>
+    :root {
+      --bg1: #0f0c29;
+      --bg2: #302b63;
+      --bg3: #24243e;
+      --accent: #ff6b6b;
+      --accent2: #ffd93d;
+      --accent3: #6bcb77;
+      --accent4: #4d96ff;
+      --accent5: #c77dff;
+      --glass: rgba(255, 255, 255, 0.08);
+      --glass-border: rgba(255, 255, 255, 0.15);
+      --text: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.65);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg3));
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    .bg-shapes {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.4;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .shape:nth-child(1) { width: 300px; height: 300px; background: #ff6b6b; top: -50px; left: -50px; }
+    .shape:nth-child(2) { width: 250px; height: 250px; background: #4d96ff; top: 40%; right: -80px; animation-delay: -2s; }
+    .shape:nth-child(3) { width: 200px; height: 200px; background: #c77dff; bottom: 10%; left: 20%; animation-delay: -4s; }
+    .shape:nth-child(4) { width: 180px; height: 180px; background: #ffd93d; bottom: -40px; right: 30%; animation-delay: -1s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-30px) scale(1.05); }
+    }
+
+    .app {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    /* ── START SCREEN ── */
+    .start-screen {
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeUp 0.6s ease;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      font-weight: 800;
+      background: linear-gradient(90deg, #ff6b6b, #ffd93d, #6bcb77, #4d96ff, #c77dff);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s linear infinite;
+      margin-bottom: 8px;
+    }
+
+    @keyframes shimmer {
+      to { background-position: 200% center; }
+    }
+
+    .tagline {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .stat-pill {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-weight: 600;
+      backdrop-filter: blur(10px);
+    }
+
+    .stat-pill span { color: var(--accent2); }
+
+    .btn-start {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 18px 48px;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      background: linear-gradient(135deg, #ff6b6b, #c77dff);
+      color: white;
+      box-shadow: 0 8px 32px rgba(255, 107, 107, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-start:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 12px 40px rgba(199, 125, 255, 0.5);
+    }
+
+    .btn-start:active { transform: scale(0.98); }
+
+    /* ── QUIZ SCREEN ── */
+    .quiz-screen { display: none; animation: fadeUp 0.4s ease; }
+    .quiz-screen.active { display: block; }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .progress-wrap {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .progress-bar {
+      height: 10px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #ff6b6b, #ffd93d, #6bcb77);
+      border-radius: 999px;
+      transition: width 0.4s ease;
+      width: 0%;
+    }
+
+    .score-badge {
+      display: flex;
+      gap: 10px;
+    }
+
+    .badge {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 8px 14px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .badge.score { color: var(--accent3); }
+    .badge.streak { color: var(--accent2); }
+
+    .question-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 28px 24px;
+      backdrop-filter: blur(16px);
+      margin-bottom: 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+
+    .lecture-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(77,150,255,0.3), rgba(199,125,255,0.3));
+      border: 1px solid rgba(255,255,255,0.2);
+      margin-bottom: 14px;
+    }
+
+    .question-num {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .question-text {
+      font-size: clamp(1.05rem, 3vw, 1.25rem);
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 18px;
+      border-radius: 16px;
+      border: 2px solid var(--glass-border);
+      background: rgba(255,255,255,0.05);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-align: left;
+      font-family: inherit;
+      font-size: 1rem;
+      color: var(--text);
+      width: 100%;
+    }
+
+    .option:hover:not(.disabled) {
+      transform: translateX(6px);
+      border-color: rgba(255,255,255,0.35);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .option-letter {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .option:nth-child(1) .option-letter { background: linear-gradient(135deg, #ff6b6b, #ff8787); }
+    .option:nth-child(2) .option-letter { background: linear-gradient(135deg, #4d96ff, #74b9ff); }
+    .option:nth-child(3) .option-letter { background: linear-gradient(135deg, #ffd93d, #ffe066); color: #333; }
+    .option:nth-child(4) .option-letter { background: linear-gradient(135deg, #6bcb77, #95e1a3); color: #333; }
+
+    .option.correct {
+      border-color: var(--accent3);
+      background: rgba(107, 203, 119, 0.2);
+      animation: pulse-correct 0.5s ease;
+    }
+
+    .option.wrong {
+      border-color: var(--accent);
+      background: rgba(255, 107, 107, 0.2);
+      animation: shake 0.4s ease;
+    }
+
+    .option.reveal-correct {
+      border-color: var(--accent3);
+      background: rgba(107, 203, 119, 0.15);
+    }
+
+    .option.disabled { cursor: default; pointer-events: none; opacity: 0.85; }
+
+    @keyframes pulse-correct {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-8px); }
+      75% { transform: translateX(8px); }
+    }
+
+    .feedback {
+      margin-top: 20px;
+      padding: 18px 20px;
+      border-radius: 16px;
+      display: none;
+      animation: fadeUp 0.3s ease;
+    }
+
+    .feedback.show { display: block; }
+
+    .feedback.correct-fb {
+      background: rgba(107, 203, 119, 0.15);
+      border: 1px solid rgba(107, 203, 119, 0.4);
+    }
+
+    .feedback.wrong-fb {
+      background: rgba(255, 107, 107, 0.12);
+      border: 1px solid rgba(255, 107, 107, 0.35);
+    }
+
+    .feedback-title {
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .feedback.correct-fb .feedback-title { color: var(--accent3); }
+    .feedback.wrong-fb .feedback-title { color: var(--accent); }
+
+    .feedback-body {
+      color: var(--text-muted);
+      line-height: 1.55;
+      font-size: 0.95rem;
+    }
+
+    .feedback-body strong { color: var(--accent3); }
+
+    .btn-next {
+      margin-top: 20px;
+      width: 100%;
+      padding: 16px;
+      border: none;
+      border-radius: 14px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      background: linear-gradient(135deg, #4d96ff, #c77dff);
+      color: white;
+      display: none;
+      transition: transform 0.2s;
+    }
+
+    .btn-next.show { display: block; }
+    .btn-next:hover { transform: translateY(-2px); }
+
+    /* ── RESULTS ── */
+    .results-screen {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeUp 0.5s ease;
+    }
+
+    .results-screen.active { display: block; }
+
+    .results-emoji { font-size: 4rem; margin-bottom: 16px; }
+
+    .results-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .results-score {
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #ffd93d, #6bcb77);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 20px 0;
+    }
+
+    .results-detail {
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .btn-restart {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 16px 40px;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      background: linear-gradient(135deg, #6bcb77, #4d96ff);
+      color: white;
+      box-shadow: 0 8px 24px rgba(107, 203, 119, 0.35);
+    }
+
+    .loading {
+      text-align: center;
+      padding: 60px;
+      color: var(--text-muted);
+    }
+
+    .loading-spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid rgba(255,255,255,0.1);
+      border-top-color: var(--accent2);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 16px;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .combo-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent2);
+      text-shadow: 0 0 30px rgba(255, 217, 61, 0.8);
+      pointer-events: none;
+      z-index: 100;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .combo-popup.show { transform: translate(-50%, -50%) scale(1); }
+  </style>
+</head>
+<body>
+  <div class="bg-shapes">
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+
+  <div class="combo-popup" id="comboPopup"></div>
+
+  <div class="app">
+    <div class="loading" id="loading">
+      <div class="loading-spinner"></div>
+      Loading 200 questions...
+    </div>
+
+    <!-- START -->
+    <div class="start-screen" id="startScreen" style="display:none">
+      <div class="logo">DataComm Quiz Arena</div>
+      <p class="tagline">CY 164 · Dr. Sylvester Akpah · UMaT</p>
+      <div class="stats-row">
+        <div class="stat-pill"><span>200</span> Questions</div>
+        <div class="stat-pill"><span>4</span> Lectures</div>
+        <div class="stat-pill">Instant Feedback</div>
+      </div>
+      <button class="btn-start" id="btnStart">Start Challenge 🎯</button>
+    </div>
+
+    <!-- QUIZ -->
+    <div class="quiz-screen" id="quizScreen">
+      <div class="top-bar">
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span>Progress</span>
+            <span id="progressText">1 / 200</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        </div>
+        <div class="score-badge">
+          <div class="badge score">✓ <span id="scoreDisplay">0</span></div>
+          <div class="badge streak">🔥 <span id="streakDisplay">0</span></div>
+        </div>
+      </div>
+
+      <div class="question-card">
+        <div class="lecture-tag" id="lectureTag">Lecture 1</div>
+        <div class="question-num" id="questionNum">Question 1 of 200</div>
+        <p class="question-text" id="questionText"></p>
+      </div>
+
+      <div class="options" id="optionsContainer"></div>
+
+      <div class="feedback" id="feedback">
+        <div class="feedback-title" id="feedbackTitle"></div>
+        <div class="feedback-body" id="feedbackBody"></div>
+      </div>
+
+      <button class="btn-next" id="btnNext">Next Question →</button>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results-screen" id="resultsScreen">
+      <div class="results-emoji" id="resultsEmoji">🏆</div>
+      <div class="results-title">Quiz Complete!</div>
+      <div class="results-score" id="finalScore">0%</div>
+      <p class="results-detail" id="resultsDetail"></p>
+      <button class="btn-restart" id="btnRestart">Play Again 🔄</button>
+    </div>
+  </div>
+
+  <script>
+    const LETTERS = ['A', 'B', 'C', 'D'];
+    let questions = [];
+    let currentIndex = 0;
+    let score = 0;
+    let streak = 0;
+    let maxStreak = 0;
+    let answered = false;
+
+    const loading = document.getElementById('loading');
+    const startScreen = document.getElementById('startScreen');
+    const quizScreen = document.getElementById('quizScreen');
+    const resultsScreen = document.getElementById('resultsScreen');
+
+    async function loadQuestions() {
+      const res = await fetch('questions.json');
+      questions = await res.json();
+      shuffleArray(questions);
+      loading.style.display = 'none';
+      startScreen.style.display = 'block';
+    }
+
+    function shuffleArray(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+    }
+
+    function fireConfetti() {
+      const duration = 2000;
+      const end = Date.now() + duration;
+      const colors = ['#ff6b6b', '#ffd93d', '#6bcb77', '#4d96ff', '#c77dff'];
+
+      (function frame() {
+        confetti({ particleCount: 4, angle: 60, spread: 55, origin: { x: 0 }, colors });
+        confetti({ particleCount: 4, angle: 120, spread: 55, origin: { x: 1 }, colors });
+        if (Date.now() < end) requestAnimationFrame(frame);
+      })();
+
+      confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 }, colors });
+    }
+
+    function showCombo(text) {
+      const popup = document.getElementById('comboPopup');
+      popup.textContent = text;
+      popup.classList.add('show');
+      setTimeout(() => popup.classList.remove('show'), 800);
+    }
+
+    function renderQuestion() {
+      answered = false;
+      const q = questions[currentIndex];
+
+      document.getElementById('lectureTag').textContent = q.lecture;
+      document.getElementById('questionNum').textContent = `Question ${currentIndex + 1} of ${questions.length}`;
+      document.getElementById('questionText').textContent = q.question;
+      document.getElementById('progressText').textContent = `${currentIndex + 1} / ${questions.length}`;
+      document.getElementById('progressFill').style.width = `${((currentIndex) / questions.length) * 100}%`;
+
+      const container = document.getElementById('optionsContainer');
+      container.innerHTML = '';
+
+      q.options.forEach((opt, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'option';
+        btn.innerHTML = `<span class="option-letter">${LETTERS[i]}</span><span>${opt}</span>`;
+        btn.addEventListener('click', () => selectAnswer(i, btn));
+        container.appendChild(btn);
+      });
+
+      const fb = document.getElementById('feedback');
+      fb.className = 'feedback';
+      fb.classList.remove('show');
+      document.getElementById('btnNext').classList.remove('show');
+    }
+
+    function selectAnswer(index, btnEl) {
+      if (answered) return;
+      answered = true;
+
+      const q = questions[currentIndex];
+      const isCorrect = index === q.correct;
+      const allOptions = document.querySelectorAll('.option');
+
+      allOptions.forEach(o => o.classList.add('disabled'));
+
+      const fb = document.getElementById('feedback');
+      fb.classList.add('show');
+
+      if (isCorrect) {
+        btnEl.classList.add('correct');
+        score++;
+        streak++;
+        if (streak > maxStreak) maxStreak = streak;
+
+        fb.classList.add('correct-fb');
+        document.getElementById('feedbackTitle').textContent = '🎉 Correct! Amazing!';
+        document.getElementById('feedbackBody').textContent = q.explanation;
+
+        fireConfetti();
+
+        if (streak >= 3 && streak % 3 === 0) {
+          showCombo(`${streak}x STREAK! 🔥`);
+          confetti({ particleCount: 150, spread: 100, origin: { y: 0.5 } });
+        }
+      } else {
+        btnEl.classList.add('wrong');
+        allOptions[q.correct].classList.add('reveal-correct');
+        streak = 0;
+
+        fb.classList.add('wrong-fb');
+        document.getElementById('feedbackTitle').textContent = '❌ Not quite!';
+        document.getElementById('feedbackBody').innerHTML =
+          `The correct answer is <strong>${LETTERS[q.correct]}. ${q.options[q.correct]}</strong><br><br>${q.explanation}`;
+      }
+
+      document.getElementById('scoreDisplay').textContent = score;
+      document.getElementById('streakDisplay').textContent = streak;
+      document.getElementById('btnNext').classList.add('show');
+    }
+
+    function nextQuestion() {
+      currentIndex++;
+      if (currentIndex >= questions.length) {
+        showResults();
+      } else {
+        renderQuestion();
+      }
+    }
+
+    function showResults() {
+      quizScreen.classList.remove('active');
+      resultsScreen.classList.add('active');
+
+      const pct = Math.round((score / questions.length) * 100);
+      document.getElementById('finalScore').textContent = `${pct}%`;
+      document.getElementById('resultsDetail').innerHTML =
+        `You got <strong style="color:#6bcb77">${score}</strong> out of <strong>${questions.length}</strong> correct.<br>` +
+        `Best streak: <strong style="color:#ffd93d">${maxStreak}</strong> 🔥`;
+
+      let emoji = '📚';
+      if (pct >= 90) emoji = '🏆';
+      else if (pct >= 70) emoji = '⭐';
+      else if (pct >= 50) emoji = '💪';
+      document.getElementById('resultsEmoji').textContent = emoji;
+
+      if (pct >= 70) {
+        setTimeout(() => fireConfetti(), 300);
+      }
+    }
+
+    function startQuiz() {
+      currentIndex = 0;
+      score = 0;
+      streak = 0;
+      maxStreak = 0;
+      shuffleArray(questions);
+
+      startScreen.style.display = 'none';
+      resultsScreen.classList.remove('active');
+      quizScreen.classList.add('active');
+
+      document.getElementById('scoreDisplay').textContent = '0';
+      document.getElementById('streakDisplay').textContent = '0';
+
+      renderQuestion();
+    }
+
+    document.getElementById('btnStart').addEventListener('click', startQuiz);
+    document.getElementById('btnNext').addEventListener('click', nextQuestion);
+    document.getElementById('btnRestart').addEventListener('click', () => {
+      resultsScreen.classList.remove('active');
+      startScreen.style.display = 'block';
+    });
+
+    loadQuestions();
+  </script>
+</body>
+</html>

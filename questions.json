@@ -1,0 +1,2602 @@
+[
+  {
+    "id": 1,
+    "lecture": "Lecture 1",
+    "question": "A video conferencing session exhibits packets arriving at 30 ms, 45 ms, 28 ms, and 52 ms intervals despite uniform 30 ms generation. Which data communication characteristic is primarily violated?",
+    "options": [
+      "Delivery",
+      "Accuracy",
+      "Timeliness alone without variation concern",
+      "Jitter"
+    ],
+    "correct": 3,
+    "explanation": "Jitter is the variation in packet arrival time; uneven delays degrade real-time audio/video quality even when data eventually arrives."
+  },
+  {
+    "id": 2,
+    "lecture": "Lecture 1",
+    "question": "Data delivered to the wrong workstation but uncorrupted violates which fundamental characteristic first?",
+    "options": [
+      "Jitter",
+      "Timeliness",
+      "Delivery",
+      "Accuracy"
+    ],
+    "correct": 2,
+    "explanation": "Delivery requires data reach the intended device only; corruption-free wrong-destination data still fails delivery."
+  },
+  {
+    "id": 3,
+    "lecture": "Lecture 1",
+    "question": "Real-time transmission in the lecture context specifically emphasizes:",
+    "options": [
+      "Maximizing throughput regardless of order",
+      "Compressing all packets before send",
+      "Ensuring zero bit errors only",
+      "Delivering data as produced, in order, without significant delay"
+    ],
+    "correct": 3,
+    "explanation": "Timeliness for video/audio means in-order, low-latency delivery matching production rate."
+  },
+  {
+    "id": 4,
+    "lecture": "Lecture 1",
+    "question": "Which quality factor measures time delay between transmission and receipt?",
+    "options": [
+      "Bandwidth",
+      "Error rate",
+      "Latency",
+      "Jitter"
+    ],
+    "correct": 2,
+    "explanation": "Latency is end-to-end delay; high latency slows interactive communication."
+  },
+  {
+    "id": 5,
+    "lecture": "Lecture 1",
+    "question": "Higher signal-to-noise ratio generally indicates:",
+    "options": [
+      "Higher latency",
+      "Lower bandwidth",
+      "Increased jitter",
+      "Clearer, more reliable communication"
+    ],
+    "correct": 3,
+    "explanation": "Higher SNR means signal dominates noise, improving clarity and reliability."
+  },
+  {
+    "id": 6,
+    "lecture": "Lecture 1",
+    "question": "Message size and complexity are classified in the lecture as:",
+    "options": [
+      "External pathway factors",
+      "Physical topology properties",
+      "Protocol layer functions",
+      "Internal factors affecting communication quality"
+    ],
+    "correct": 3,
+    "explanation": "Internal factors relate to message nature; size and complexity are internal."
+  },
+  {
+    "id": 7,
+    "lecture": "Lecture 1",
+    "question": "Simultaneous messages on a shared network path are an example of:",
+    "options": [
+      "A presentation layer concern",
+      "An internal message factor",
+      "An external factor affecting quality",
+      "A MAC addressing issue"
+    ],
+    "correct": 2,
+    "explanation": "External factors include pathway quality and concurrent network traffic."
+  },
+  {
+    "id": 8,
+    "lecture": "Lecture 1",
+    "question": "Without a protocol, two connected devices:",
+    "options": [
+      "Automatically use TCP/IP",
+      "Operate at application layer",
+      "May be connected but cannot communicate meaningfully",
+      "Share MAC addresses"
+    ],
+    "correct": 2,
+    "explanation": "Protocol is the agreed rule set; connection alone does not enable understanding."
+  },
+  {
+    "id": 9,
+    "lecture": "Lecture 1",
+    "question": "Which is NOT one of the five components of a data communication system per the lecture?",
+    "options": [
+      "Router",
+      "Sender",
+      "Message",
+      "Transmission medium"
+    ],
+    "correct": 0,
+    "explanation": "The five components are message, sender, receiver, transmission medium, and protocol."
+  },
+  {
+    "id": 10,
+    "lecture": "Lecture 1",
+    "question": "Numbers in data communication are represented by:",
+    "options": [
+      "Analog waveforms only",
+      "Hexadecimal MAC addresses",
+      "Direct binary bit patterns, not ASCII text encoding",
+      "ASCII codes exclusively"
+    ],
+    "correct": 2,
+    "explanation": "Unlike text, numbers convert directly to binary for mathematical operations."
+  },
+  {
+    "id": 11,
+    "lecture": "Lecture 1",
+    "question": "Audio is described as continuous rather than discrete because:",
+    "options": [
+      "It cannot be digitized",
+      "It uses only analog hubs",
+      "It requires application layer gateways",
+      "It varies continuously over time unlike discrete text or pixel grids"
+    ],
+    "correct": 3,
+    "explanation": "Audio is inherently continuous; digitization samples it but nature differs from discrete text/images."
+  },
+  {
+    "id": 12,
+    "lecture": "Lecture 1",
+    "question": "A NIC MAC address is typically:",
+    "options": [
+      "A 128-bit IPv6 prefix",
+      "A protocol port number",
+      "A 32-bit IPv4 address",
+      "A 48-bit manufacturer-assigned identifier in hexadecimal"
+    ],
+    "correct": 3,
+    "explanation": "MAC addresses are 48-bit hardware identifiers, usually shown in hex."
+  },
+  {
+    "id": 13,
+    "lecture": "Lecture 1",
+    "question": "Software configuration of IP address, subnet mask, and default gateway on a NIC occurs at:",
+    "options": [
+      "MAC manufacturer ROM only",
+      "Physical layer only",
+      "Network layer configuration (logical addressing), not MAC assignment",
+      "Application layer exclusively"
+    ],
+    "correct": 2,
+    "explanation": "IP settings are logical network configuration layered above the hardware MAC."
+  },
+  {
+    "id": 14,
+    "lecture": "Lecture 1",
+    "question": "Which device operates exclusively at OSI Layer 1 (Physical)?",
+    "options": [
+      "Bridge",
+      "Router",
+      "Switch",
+      "Repeater"
+    ],
+    "correct": 3,
+    "explanation": "Repeaters regenerate signals at the physical layer without framing or addressing logic."
+  },
+  {
+    "id": 15,
+    "lecture": "Lecture 1",
+    "question": "A hub differs from a switch primarily because a hub:",
+    "options": [
+      "Broadcasts packets to all ports without filtering or intelligent forwarding",
+      "Operates at network layer",
+      "Segments collision domains per MAC table",
+      "Translates between protocol suites"
+    ],
+    "correct": 0,
+    "explanation": "Hubs are multiport repeaters flooding all ports; no selective forwarding."
+  },
+  {
+    "id": 16,
+    "lecture": "Lecture 1",
+    "question": "An active hub differs from a passive hub because an active hub:",
+    "options": [
+      "Filters frames by MAC address",
+      "Has its own power supply and can clean, boost, and relay signals",
+      "Operates at Layer 3",
+      "Collects wiring only without amplification"
+    ],
+    "correct": 1,
+    "explanation": "Active hubs amplify and regenerate; passive hubs merely relay without boosting."
+  },
+  {
+    "id": 17,
+    "lecture": "Lecture 1",
+    "question": "At which OSI layer does a switch primarily operate?",
+    "options": [
+      "Physical Layer",
+      "Application Layer",
+      "Network Layer",
+      "Data Link Layer (Layer 2)"
+    ],
+    "correct": 3,
+    "explanation": "Switches forward frames using MAC addresses at Layer 2."
+  },
+  {
+    "id": 18,
+    "lecture": "Lecture 1",
+    "question": "A bridge is primarily used to:",
+    "options": [
+      "Translate application protocols between WANs",
+      "Route packets using IP addresses globally",
+      "Connect network segments at Layer 2 and reduce congestion within LANs",
+      "Regenerate bits on a single cable only"
+    ],
+    "correct": 2,
+    "explanation": "Bridges interconnect LAN segments at the data link layer."
+  },
+  {
+    "id": 19,
+    "lecture": "Lecture 1",
+    "question": "A gateway operates at OSI Layer 7 primarily to:",
+    "options": [
+      "Assign DHCP leases",
+      "Amplify attenuated electrical signals",
+      "Forward frames by MAC address",
+      "Translate protocols and data formats between dissimilar networks"
+    ],
+    "correct": 3,
+    "explanation": "Gateways perform application-layer protocol translation between heterogeneous systems."
+  },
+  {
+    "id": 20,
+    "lecture": "Lecture 1",
+    "question": "Routers use which addressing scheme for inter-network forwarding?",
+    "options": [
+      "IP addresses at the Network Layer (Layer 3)",
+      "MAC addresses only",
+      "Port numbers exclusively",
+      "Physical cable identifiers"
+    ],
+    "correct": 0,
+    "explanation": "Routers forward packets between networks using logical IP addressing."
+  },
+  {
+    "id": 21,
+    "lecture": "Lecture 1",
+    "question": "Which network device can perform NAT and VPN functions per the lecture?",
+    "options": [
+      "Router",
+      "Repeater",
+      "Unmanaged switch",
+      "Passive hub"
+    ],
+    "correct": 0,
+    "explanation": "Routers may filter traffic, perform NAT, and provide VPN connectivity."
+  },
+  {
+    "id": 22,
+    "lecture": "Lecture 1",
+    "question": "Wi-Fi NIC standards mentioned include 802.11n, 802.11ac, and:",
+    "options": [
+      "802.11ax",
+      "802.15.1 only",
+      "802.1Q",
+      "802.3ab"
+    ],
+    "correct": 0,
+    "explanation": "802.11ax is a Wi-Fi standard; 802.3 relates to Ethernet wired."
+  },
+  {
+    "id": 23,
+    "lecture": "Lecture 1",
+    "question": "Ethernet NIC speeds cited include 10 Mbps, 100 Mbps, and:",
+    "options": [
+      "56 Kbps",
+      "512 Kbps",
+      "10 Gbps only as minimum",
+      "1 Gbps"
+    ],
+    "correct": 3,
+    "explanation": "Lecture lists 10, 100 Mbps, and 1 Gbps as common Ethernet NIC speeds."
+  },
+  {
+    "id": 24,
+    "lecture": "Lecture 1",
+    "question": "Accuracy in data communication means:",
+    "options": [
+      "Data must reach any device on the subnet",
+      "Packets must be equal size",
+      "Data must arrive unchanged from what was sent",
+      "Data must arrive quickly only"
+    ],
+    "correct": 2,
+    "explanation": "Accuracy requires uncorrupted data; altered transmission renders data unusable."
+  },
+  {
+    "id": 25,
+    "lecture": "Lecture 1",
+    "question": "Bandwidth in quality of communication refers to:",
+    "options": [
+      "Number of network devices",
+      "Data transmittable per unit time over a channel",
+      "Physical cable length",
+      "Protocol header size"
+    ],
+    "correct": 1,
+    "explanation": "Bandwidth is capacity over time, not distance or device count."
+  },
+  {
+    "id": 26,
+    "lecture": "Lecture 1",
+    "question": "High error rate during transmission most directly threatens:",
+    "options": [
+      "Only physical layer naming",
+      "Star topology geometry",
+      "Accuracy and usability of received data",
+      "Application layer GUI design"
+    ],
+    "correct": 2,
+    "explanation": "Errors corrupt data, undermining accuracy and information integrity."
+  },
+  {
+    "id": 27,
+    "lecture": "Lecture 1",
+    "question": "Interference as a quality factor results in:",
+    "options": [
+      "OSI layer reduction",
+      "Mandatory full-duplex mode",
+      "Increased MAC address length",
+      "Data loss or corruption on the channel"
+    ],
+    "correct": 3,
+    "explanation": "Interference disrupts signals, causing loss or corruption."
+  },
+  {
+    "id": 28,
+    "lecture": "Lecture 1",
+    "question": "Devices that originate messages include PCs and servers; devices that direct messages include:",
+    "options": [
+      "Only keyboards and monitors",
+      "Only fiber optic cables",
+      "Routers, switches, and repeaters",
+      "Only application software"
+    ],
+    "correct": 2,
+    "explanation": "Network infrastructure devices manage and direct message flow."
+  },
+  {
+    "id": 29,
+    "lecture": "Lecture 1",
+    "question": "Images in digital form are fundamentally represented as:",
+    "options": [
+      "UDP datagram headers",
+      "Continuous analog sine waves only",
+      "Bit patterns, often as pixel matrices",
+      "ASCII character streams exclusively"
+    ],
+    "correct": 2,
+    "explanation": "Images encode as bits, commonly pixel grids."
+  },
+  {
+    "id": 30,
+    "lecture": "Lecture 1",
+    "question": "Video may be produced as continuous capture or as:",
+    "options": [
+      "Discrete frames arranged to convey motion",
+      "Only simplex infrared signals",
+      "Only hub-broadcast frames",
+      "Unidirectional MAC floods"
+    ],
+    "correct": 0,
+    "explanation": "Video can be continuous or discrete frame sequences suggesting motion."
+  },
+  {
+    "id": 31,
+    "lecture": "Lecture 1",
+    "question": "A passive hub cannot extend distance between nodes because it:",
+    "options": [
+      "Maintains a MAC address table",
+      "Does not clean or boost signals before relaying",
+      "Performs IP routing",
+      "Operates at Layer 7"
+    ],
+    "correct": 1,
+    "explanation": "Passive hubs lack amplification; they cannot extend range like active hubs."
+  },
+  {
+    "id": 32,
+    "lecture": "Lecture 1",
+    "question": "Switch segmentation of a LAN improves security by:",
+    "options": [
+      "Limiting scope of traffic to relevant segments/recipients",
+      "Eliminating the need for protocols",
+      "Replacing protocols with OSI standards",
+      "Encrypting all Layer 7 payloads automatically"
+    ],
+    "correct": 0,
+    "explanation": "Segmentation confines broadcast domains and directs traffic, reducing exposure."
+  },
+  {
+    "id": 33,
+    "lecture": "Lecture 1",
+    "question": "The pathway quality between sender and recipient is classified as:",
+    "options": [
+      "An external communication quality factor",
+      "An internal message property",
+      "A de jure standard",
+      "A TCP/IP layer"
+    ],
+    "correct": 0,
+    "explanation": "Pathway quality is external to message content."
+  },
+  {
+    "id": 34,
+    "lecture": "Lecture 1",
+    "question": "Time allotted for successful communication is considered:",
+    "options": [
+      "A NIC hardware address",
+      "A mesh topology requirement",
+      "An external factor affecting quality",
+      "A presentation layer function"
+    ],
+    "correct": 2,
+    "explanation": "Allotted time is an external constraint on communication success."
+  },
+  {
+    "id": 35,
+    "lecture": "Lecture 1",
+    "question": "Text representation in data communications uses:",
+    "options": [
+      "Direct analog frequency modulation only",
+      "Only MAC layer headers",
+      "Bit patterns, often with codes like ASCII",
+      "Uncompressed video frames"
+    ],
+    "correct": 2,
+    "explanation": "Text encodes as bit sequences using character codes."
+  },
+  {
+    "id": 36,
+    "lecture": "Lecture 1",
+    "question": "A repeater receives a weak signal and:",
+    "options": [
+      "Filters by IP subnet",
+      "Translates HTTP to FTP",
+      "Assigns logical topologies",
+      "Retransmits it at higher power on another segment"
+    ],
+    "correct": 3,
+    "explanation": "Repeaters amplify/regenerate physical signals to extend reach."
+  },
+  {
+    "id": 37,
+    "lecture": "Lecture 1",
+    "question": "Hub inefficiency stems mainly from:",
+    "options": [
+      "Operating above session layer",
+      "Flooding all ports and lacking optimal path selection",
+      "Mandatory fiber-only media",
+      "IPv6-only addressing"
+    ],
+    "correct": 1,
+    "explanation": "Hubs broadcast to all devices, wasting bandwidth and causing collisions."
+  },
+  {
+    "id": 38,
+    "lecture": "Lecture 1",
+    "question": "Bridge use for security prevents:",
+    "options": [
+      "Traffic from one segment reaching other segments when segmented",
+      "Need for any receivers",
+      "All physical layer noise",
+      "Use of any protocols"
+    ],
+    "correct": 0,
+    "explanation": "Segmentation isolates traffic for security and performance."
+  },
+  {
+    "id": 39,
+    "lecture": "Lecture 1",
+    "question": "Gateway connectivity between organizations with different security policies enables:",
+    "options": [
+      "Pure Layer 1 signal boost only",
+      "Controlled inter-network communication",
+      "Mandatory bus topology",
+      "Elimination of all protocol rules"
+    ],
+    "correct": 1,
+    "explanation": "Gateways bridge heterogeneous networks with policy and protocol control."
+  },
+  {
+    "id": 40,
+    "lecture": "Lecture 1",
+    "question": "Which characteristic pair distinguishes jitter from general timeliness?",
+    "options": [
+      "They are identical terms",
+      "Jitter is bit error rate; timeliness is encryption",
+      "Jitter is bandwidth; timeliness is cable type",
+      "Jitter is arrival-time variation; timeliness is overall prompt delivery"
+    ],
+    "correct": 3,
+    "explanation": "Timeliness concerns delay; jitter concerns inconsistency of delays."
+  },
+  {
+    "id": 41,
+    "lecture": "Lecture 1",
+    "question": "Receiver in a data communication system can be a:",
+    "options": [
+      "ISO standard exclusively",
+      "Protocol specification document only",
+      "Computer, workstation, telephone handset, or television",
+      "Transmission medium cable"
+    ],
+    "correct": 2,
+    "explanation": "Receivers are devices that accept messages, including phones and TVs."
+  },
+  {
+    "id": 42,
+    "lecture": "Lecture 1",
+    "question": "Sender devices cited include computers, workstations, and:",
+    "options": [
+      "Only repeaters",
+      "Only passive hubs",
+      "Video cameras and telephone handsets",
+      "Only gateways exclusively"
+    ],
+    "correct": 2,
+    "explanation": "Senders encompass various input/capture devices per lecture."
+  },
+  {
+    "id": 43,
+    "lecture": "Lecture 1",
+    "question": "Protocol analogy: French speaker vs Japanese speaker illustrates lack of:",
+    "options": [
+      "Star topology",
+      "Electric power",
+      "Fiber optic cable",
+      "Agreed communication rules despite physical connection"
+    ],
+    "correct": 3,
+    "explanation": "Without shared protocol (language rules), communication fails."
+  },
+  {
+    "id": 44,
+    "lecture": "Lecture 1",
+    "question": "Network adapter is another name for:",
+    "options": [
+      "Repeater",
+      "Network Interface Card (NIC)",
+      "Gateway",
+      "Router"
+    ],
+    "correct": 1,
+    "explanation": "NIC is also called network adapter or network card."
+  },
+  {
+    "id": 45,
+    "lecture": "Lecture 1",
+    "question": "Switches reduce congestion compared to hubs by:",
+    "options": [
+      "Broadcasting to every port always",
+      "Sending frames only to intended recipients using MAC learning",
+      "Ignoring data link addresses",
+      "Operating only at Layer 7"
+    ],
+    "correct": 1,
+    "explanation": "Switches selectively forward, unlike hub flood behavior."
+  },
+  {
+    "id": 46,
+    "lecture": "Lecture 1",
+    "question": "Intended device-only reception defines which characteristic?",
+    "options": [
+      "Bandwidth",
+      "Delivery",
+      "Topology type",
+      "Jitter"
+    ],
+    "correct": 1,
+    "explanation": "Delivery requires correct destination device/user only."
+  },
+  {
+    "id": 47,
+    "lecture": "Lecture 1",
+    "question": "Altered but timely data fails primarily which characteristic?",
+    "options": [
+      "Duplex mode definition",
+      "Delivery if destination correct",
+      "Network classification",
+      "Accuracy"
+    ],
+    "correct": 3,
+    "explanation": "Uncorrected alteration makes data unusable, violating accuracy."
+  },
+  {
+    "id": 48,
+    "lecture": "Lecture 1",
+    "question": "Which is an example of transmission medium?",
+    "options": [
+      "Application layer HTTP",
+      "MAC address table",
+      "Twisted pair cable carrying signals between sender and receiver",
+      "Client-server architecture"
+    ],
+    "correct": 2,
+    "explanation": "Transmission medium is the physical/logical path for message travel."
+  },
+  {
+    "id": 49,
+    "lecture": "Lecture 1",
+    "question": "Router placement is commonly associated with:",
+    "options": [
+      "Infrared remote one-way only",
+      "WANs and the Internet connecting different networks",
+      "PAN Bluetooth headphone links only",
+      "Simplex keyboard LED only"
+    ],
+    "correct": 1,
+    "explanation": "Routers interconnect networks, especially WAN/Internet scenarios."
+  },
+  {
+    "id": 50,
+    "lecture": "Lecture 1",
+    "question": "Quality of communication encompasses accuracy, reliability, and:",
+    "options": [
+      "Only cable color coding",
+      "Only GUI design",
+      "Only printer sharing",
+      "Efficiency of transmission and reception"
+    ],
+    "correct": 3,
+    "explanation": "Lecture defines quality as accuracy, reliability, and efficiency."
+  },
+  {
+    "id": 51,
+    "lecture": "Lecture 2",
+    "question": "A network spanning a single building under one administration is best classified as:",
+    "options": [
+      "Global Internet only",
+      "WAN",
+      "PAN",
+      "LAN"
+    ],
+    "correct": 3,
+    "explanation": "LAN covers a building/campus under single administrative control."
+  },
+  {
+    "id": 52,
+    "lecture": "Lecture 2",
+    "question": "PAN connectivity range is approximately:",
+    "options": [
+      "Up to 100 kilometers",
+      "Unlimited with no spatial limit",
+      "Cross-continental",
+      "Up to 10 meters"
+    ],
+    "correct": 3,
+    "explanation": "PAN is personal, typically Bluetooth/infrared within ~10 meters."
+  },
+  {
+    "id": 53,
+    "lecture": "Lecture 2",
+    "question": "MAN typically sits functionally between:",
+    "options": [
+      "LAN and WAN",
+      "Application and presentation layers only",
+      "Only two PCs point-to-point",
+      "PAN and simplex only"
+    ],
+    "correct": 0,
+    "explanation": "MAN covers a city, linking LANs toward WAN/Internet uplinks."
+  },
+  {
+    "id": 54,
+    "lecture": "Lecture 2",
+    "question": "The largest WAN cited in the lecture is:",
+    "options": [
+      "The Internet",
+      "A Bluetooth PAN",
+      "A classroom LAN only",
+      "A single Ethernet bus"
+    ],
+    "correct": 0,
+    "explanation": "Internet is described as largest WAN covering geographical world."
+  },
+  {
+    "id": 55,
+    "lecture": "Lecture 2",
+    "question": "Mesh topology connectivity means:",
+    "options": [
+      "Devices connect only to left/right peers",
+      "Every device connects to every other device",
+      "One central hub links all",
+      "All devices share one linear cable"
+    ],
+    "correct": 1,
+    "explanation": "Mesh provides dedicated links between each pair for redundancy."
+  },
+  {
+    "id": 56,
+    "lecture": "Lecture 2",
+    "question": "Bus topology sends data by:",
+    "options": [
+      "Broadcast on shared backbone; devices inspect intended recipient",
+      "Gateway protocol translation",
+      "Token passing in a ring only",
+      "Central hub forwarding only"
+    ],
+    "correct": 0,
+    "explanation": "Bus broadcasts on shared medium; nodes filter by destination."
+  },
+  {
+    "id": 57,
+    "lecture": "Lecture 2",
+    "question": "Star topology central device failure affecting one link:",
+    "options": [
+      "Does not necessarily disable entire network unlike single bus break",
+      "Always crashes all nodes",
+      "Forces mesh conversion",
+      "Eliminates need for switches"
+    ],
+    "correct": 0,
+    "explanation": "Star isolates link failures; other nodes remain connected to hub/switch."
+  },
+  {
+    "id": 58,
+    "lecture": "Lecture 2",
+    "question": "Ring topology allows how many simultaneous transmitters per the lecture?",
+    "options": [
+      "Unlimited simultaneous",
+      "Exactly two always",
+      "Zero without gateway",
+      "One device at a time"
+    ],
+    "correct": 3,
+    "explanation": "Ring uses token-like single transmission to avoid collisions."
+  },
+  {
+    "id": 59,
+    "lecture": "Lecture 2",
+    "question": "Hybrid topology arises when:",
+    "options": [
+      "Only PAN exists",
+      "No physical medium is present",
+      "Only bus is used",
+      "Multiple connectivity patterns combine arbitrarily"
+    ],
+    "correct": 3,
+    "explanation": "Hybrid mixes mesh, bus, star, ring approaches."
+  },
+  {
+    "id": 60,
+    "lecture": "Lecture 2",
+    "question": "Physical topology refers to:",
+    "options": [
+      "Only IP routing tables",
+      "Physical design: devices, locations, and cable installation",
+      "Only application protocols",
+      "How data logically transfers regardless of layout"
+    ],
+    "correct": 1,
+    "explanation": "Physical topology is tangible layout; logical is data flow pattern."
+  },
+  {
+    "id": 61,
+    "lecture": "Lecture 2",
+    "question": "Logical topology describes:",
+    "options": [
+      "Cable color standards only",
+      "Manufacturer warranty terms",
+      "De jure ISO voting procedures",
+      "How data transfers in the network versus physical design"
+    ],
+    "correct": 3,
+    "explanation": "Logical topology concerns data flow behavior, not cable paths."
+  },
+  {
+    "id": 62,
+    "lecture": "Lecture 2",
+    "question": "P2P architecture lacks:",
+    "options": [
+      "Protocols entirely",
+      "Physical transmission media",
+      "A centralized server controlling all node communication",
+      "Any node communication ability"
+    ],
+    "correct": 2,
+    "explanation": "P2P nodes act as both client and server without central control."
+  },
+  {
+    "id": 63,
+    "lecture": "Lecture 2",
+    "question": "Client-server architecture advantage emphasized includes:",
+    "options": [
+      "Zero implementation cost",
+      "Elimination of all protocols",
+      "Centralized control and enhanced security",
+      "No need for servers"
+    ],
+    "correct": 2,
+    "explanation": "Client-server offers centralized management and security at scale."
+  },
+  {
+    "id": 64,
+    "lecture": "Lecture 2",
+    "question": "P2P disadvantage noted includes:",
+    "options": [
+      "Difficulty managing and securing large numbers of nodes",
+      "Mandatory fiber optic media",
+      "Fixed simplex-only flow",
+      "Inability to share files"
+    ],
+    "correct": 0,
+    "explanation": "Decentralized P2P complicates management and security at scale."
+  },
+  {
+    "id": 65,
+    "lecture": "Lecture 2",
+    "question": "Digital signals differ from analog because digital signals are:",
+    "options": [
+      "Unable to represent Ethernet",
+      "Discrete binary values less susceptible to noise over distance",
+      "Always sound waves only",
+      "Continuous amplitude/frequency variations"
+    ],
+    "correct": 1,
+    "explanation": "Digital uses 0/1 bits; less noise susceptibility and degradation over distance."
+  },
+  {
+    "id": 66,
+    "lecture": "Lecture 2",
+    "question": "Analog signals are especially susceptible to:",
+    "options": [
+      "MAC address collisions",
+      "Only impulse noise on digital exclusively",
+      "Noise and interference causing distortion and degradation",
+      "Session layer timeout only"
+    ],
+    "correct": 2,
+    "explanation": "Continuous analog signals distort easily from noise/interference."
+  },
+  {
+    "id": 67,
+    "lecture": "Lecture 2",
+    "question": "Thermal noise originates from:",
+    "options": [
+      "Lightning impulse only",
+      "Hub broadcasting",
+      "Heat agitating electronic conductors in the medium",
+      "IP routing loops"
+    ],
+    "correct": 2,
+    "explanation": "Thermal noise is unavoidable heat-induced electron agitation up to a level."
+  },
+  {
+    "id": 68,
+    "lecture": "Lecture 2",
+    "question": "Intermodulation noise occurs when:",
+    "options": [
+      "Ring topology breaks",
+      "Single frequency travels perfectly",
+      "Only digital impulses strike",
+      "Multiple frequencies share a medium and interfere, producing unexpected frequencies"
+    ],
+    "correct": 3,
+    "explanation": "Shared medium frequency interference creates intermodulation products."
+  },
+  {
+    "id": 69,
+    "lecture": "Lecture 2",
+    "question": "Crosstalk is defined as:",
+    "options": [
+      "Foreign signal in one medium affecting signal in another medium",
+      "WAN latency alone",
+      "Thermal heat noise only",
+      "De jure standard conflict"
+    ],
+    "correct": 0,
+    "explanation": "Crosstalk is cross-medium signal leakage."
+  },
+  {
+    "id": 70,
+    "lecture": "Lecture 2",
+    "question": "Impulse noise examples include lightning, short circuits, and:",
+    "options": [
+      "Steady thermal equilibrium only",
+      "Faulty components; digital data is mostly affected",
+      "Normal TCP acknowledgments",
+      "Scheduled backups"
+    ],
+    "correct": 1,
+    "explanation": "Impulse noise from irregular disturbances disproportionately hits digital data."
+  },
+  {
+    "id": 71,
+    "lecture": "Lecture 2",
+    "question": "Simplex communication example alignment:",
+    "options": [
+      "Half-duplex walkie-talkie press-to-talk",
+      "Full-duplex telephone conversation",
+      "Bidirectional simultaneous modem default full duplex",
+      "Keyboard to computer (one direction only)"
+    ],
+    "correct": 3,
+    "explanation": "Simplex is unidirectional: keyboard input exemplifies transmit-only from keyboard perspective."
+  },
+  {
+    "id": 72,
+    "lecture": "Lecture 2",
+    "question": "Half-duplex allows:",
+    "options": [
+      "One direction only ever",
+      "No direction without gateway",
+      "Both directions but only one direction at a time",
+      "Both directions simultaneously always"
+    ],
+    "correct": 2,
+    "explanation": "Half-duplex alternates direction; not simultaneous like full duplex."
+  },
+  {
+    "id": 73,
+    "lecture": "Lecture 2",
+    "question": "Full-duplex is analogous to:",
+    "options": [
+      "Dead-end road",
+      "Simplex satellite downlink only",
+      "Two-way street with simultaneous traffic both directions",
+      "One-way street only"
+    ],
+    "correct": 2,
+    "explanation": "Lecture compares full duplex to two-way simultaneous traffic flow."
+  },
+  {
+    "id": 74,
+    "lecture": "Lecture 2",
+    "question": "Network performance may be measured by transmit time and:",
+    "options": [
+      "Cable jacket color",
+      "Response time",
+      "Hub port count squared",
+      "MAC bit length only"
+    ],
+    "correct": 1,
+    "explanation": "Performance metrics include transmit time and response time (inquiry to reply)."
+  },
+  {
+    "id": 75,
+    "lecture": "Lecture 2",
+    "question": "Network reliability includes frequency of failure, recovery time, and:",
+    "options": [
+      "PAN range meters",
+      "Robustness in catastrophe",
+      "Only GUI responsiveness",
+      "Presentation layer encoding"
+    ],
+    "correct": 1,
+    "explanation": "Reliability covers failure rate, recovery, and disaster robustness."
+  },
+  {
+    "id": 76,
+    "lecture": "Lecture 2",
+    "question": "Network security involves policies to prevent unauthorized access, misuse, modification, and:",
+    "options": [
+      "Elimination of latency",
+      "Analog-only signaling",
+      "Mandatory bus topology",
+      "Denial of network-accessible resources"
+    ],
+    "correct": 3,
+    "explanation": "Security includes preventing denial of access to network resources."
+  },
+  {
+    "id": 77,
+    "lecture": "Lecture 2",
+    "question": "Point-to-point connection establishes:",
+    "options": [
+      "Shared medium among all devices always",
+      "Multipoint Wi-Fi only",
+      "Application layer translation",
+      "Dedicated channel directly between two devices without intermediary switching for that link"
+    ],
+    "correct": 3,
+    "explanation": "Point-to-point is direct dedicated link between two endpoints."
+  },
+  {
+    "id": 78,
+    "lecture": "Lecture 2",
+    "question": "Multipoint connection shares:",
+    "options": [
+      "Separate dedicated pairwise fiber for every pair always",
+      "Only Layer 7 gateways",
+      "Simplex-only keyboard links exclusively",
+      "One transmission medium among multiple devices"
+    ],
+    "correct": 3,
+    "explanation": "Multipoint uses shared channel; e.g., wireless AP or bus topology."
+  },
+  {
+    "id": 79,
+    "lecture": "Lecture 2",
+    "question": "De facto standards are characterized by:",
+    "options": [
+      "Widespread adoption without official ratification (e.g., TCP/IP, Windows)",
+      "Mandatory ISO 1984 vote only",
+      "Legislation by accredited bodies only",
+      "Never used in industry"
+    ],
+    "correct": 0,
+    "explanation": "De facto emerge from market consensus, not formal standards bodies."
+  },
+  {
+    "id": 80,
+    "lecture": "Lecture 2",
+    "question": "De jure standards are developed by:",
+    "options": [
+      "Random user forums only",
+      "Accredited organizations with formal audited procedures",
+      "Repeater hardware exclusively",
+      "Single vendor marketing alone without process"
+    ],
+    "correct": 1,
+    "explanation": "De jure standards come from official standards organizations."
+  },
+  {
+    "id": 81,
+    "lecture": "Lecture 2",
+    "question": "Organizations developing network standards include ISO, IEEE, IETF, ANSI, and:",
+    "options": [
+      "Only PC manufacturers internally",
+      "CCITT",
+      "No international bodies",
+      "Only Bluetooth SIG exclusively as sole body"
+    ],
+    "correct": 1,
+    "explanation": "Lecture lists ISO, IEEE, IETF, ANSI, and CCITT."
+  },
+  {
+    "id": 82,
+    "lecture": "Lecture 2",
+    "question": "TCP/IP as a standard example is:",
+    "options": [
+      "De facto",
+      "Never adopted",
+      "De jure exclusively by ISO OSI replacement",
+      "Only physical layer coax standard"
+    ],
+    "correct": 0,
+    "explanation": "TCP/IP gained dominance through widespread use—de facto."
+  },
+  {
+    "id": 83,
+    "lecture": "Lecture 2",
+    "question": "Private network definition from administration view:",
+    "options": [
+      "Autonomous system inaccessible outside its physical/logical domain",
+      "Public Wi-Fi hotspot",
+      "Any Internet-connected host",
+      "Mandatory mesh WAN"
+    ],
+    "correct": 0,
+    "explanation": "Private networks belong to one organization and block outside access."
+  },
+  {
+    "id": 84,
+    "lecture": "Lecture 2",
+    "question": "Geographic classification from table to worldwide coverage maps to:",
+    "options": [
+      "Only simplex modes",
+      "Only fiber categories",
+      "PAN → LAN → MAN → WAN progression of span",
+      "Only OSI seven layers"
+    ],
+    "correct": 2,
+    "explanation": "Span increases: PAN (meters), LAN (building), MAN (city), WAN (wide/global)."
+  },
+  {
+    "id": 85,
+    "lecture": "Lecture 2",
+    "question": "Linear structure with left/right peer links describes:",
+    "options": [
+      "Gateway translation",
+      "Star hub only",
+      "Ring-like linear peer connection pattern in interconnectivity classification",
+      "Full mesh"
+    ],
+    "correct": 2,
+    "explanation": "Each device connects to left and right peers forming linear/ring structure."
+  },
+  {
+    "id": 86,
+    "lecture": "Lecture 2",
+    "question": "Computer network definition emphasizes:",
+    "options": [
+      "Isolated single PC only",
+      "Only printer drivers",
+      "Connected devices sharing communication and resources via hardware/software",
+      "Only analog radio without protocols"
+    ],
+    "correct": 2,
+    "explanation": "Networks connect devices for communication, resource sharing, protocols."
+  },
+  {
+    "id": 87,
+    "lecture": "Lecture 2",
+    "question": "LAN may connect as few as two systems up to:",
+    "options": [
+      "Exactly 10 devices maximum",
+      "16 million systems (per lecture figure)",
+      "Two devices only",
+      "Unlimited with no cited bound"
+    ],
+    "correct": 1,
+    "explanation": "Lecture states LAN systems may vary from 2 to as many as 16 million."
+  },
+  {
+    "id": 88,
+    "lecture": "Lecture 2",
+    "question": "MAN backbone commonly uses:",
+    "options": [
+      "Only infrared remotes",
+      "Simplex keyboard cables",
+      "Only UTP Cat3 telephone",
+      "High-capacity high-speed fibre optics"
+    ],
+    "correct": 3,
+    "explanation": "MAN relies on high-capacity fiber backbones per lecture."
+  },
+  {
+    "id": 89,
+    "lecture": "Lecture 2",
+    "question": "WAN equipment is described as:",
+    "options": [
+      "Identical cost to UTP patch cords",
+      "Unnecessary for Internet",
+      "Very expensive due to high-speed backbone needs",
+      "Cheaper than PAN Bluetooth"
+    ],
+    "correct": 2,
+    "explanation": "WANs use costly equipment for wide-area high-speed connectivity."
+  },
+  {
+    "id": 90,
+    "lecture": "Lecture 2",
+    "question": "Ring topology failure of one device or cable cut can:",
+    "options": [
+      "Only affect application layer",
+      "Disrupt entire network",
+      "Automatically convert to mesh",
+      "Never affect others"
+    ],
+    "correct": 1,
+    "explanation": "Ring single break can halt whole loop operation."
+  },
+  {
+    "id": 91,
+    "lecture": "Lecture 2",
+    "question": "Mesh topology drawback emphasized is:",
+    "options": [
+      "Inability to tolerate any failure",
+      "High cabling and equipment cost",
+      "Mandatory simplex",
+      "No redundancy paths"
+    ],
+    "correct": 1,
+    "explanation": "Full mesh is expensive despite redundancy benefits."
+  },
+  {
+    "id": 92,
+    "lecture": "Lecture 2",
+    "question": "Data must be converted to electromagnetic signals before sending over:",
+    "options": [
+      "MAC address tables alone",
+      "Only de jure documents",
+      "Only application presentations",
+      "Physical medium"
+    ],
+    "correct": 3,
+    "explanation": "Physical transmission requires electromagnetic signal conversion."
+  },
+  {
+    "id": 93,
+    "lecture": "Lecture 2",
+    "question": "Examples of digital signals in lecture include Ethernet, USB, and:",
+    "options": [
+      "Hub flood broadcasts as analog only",
+      "Analog radio waves only",
+      "HDMI",
+      "Sound waves unencoded"
+    ],
+    "correct": 2,
+    "explanation": "Ethernet, USB, HDMI are digital signal examples cited."
+  },
+  {
+    "id": 94,
+    "lecture": "Lecture 2",
+    "question": "Examples of analog signals include sound waves and:",
+    "options": [
+      "Radio waves (continuous variation)",
+      "ASCII bit patterns",
+      "Discrete pixel grids",
+      "Binary Ethernet frames"
+    ],
+    "correct": 0,
+    "explanation": "Sound and radio waves exemplify continuous analog signals."
+  },
+  {
+    "id": 95,
+    "lecture": "Lecture 2",
+    "question": "Wireless computer networks may use wired or wireless media to connect computers for:",
+    "options": [
+      "Information and resource sharing",
+      "Avoiding all protocols",
+      "Eliminating receivers",
+      "Only OSI documentation storage"
+    ],
+    "correct": 0,
+    "explanation": "Networks enable sharing regardless of wired/wireless attachment."
+  },
+  {
+    "id": 96,
+    "lecture": "Lecture 2",
+    "question": "E-commerce application of networks enabled:",
+    "options": [
+      "Elimination of WANs",
+      "Online product/service sales and new markets",
+      "Only simplex keyboard input",
+      "Mandatory ring topology"
+    ],
+    "correct": 1,
+    "explanation": "Networks underpin e-commerce growth and market expansion."
+  },
+  {
+    "id": 97,
+    "lecture": "Lecture 2",
+    "question": "Telemedicine benefit cited is:",
+    "options": [
+      "Hub broadcast efficiency",
+      "MAC address shortening",
+      "Physical layer repeater sale",
+      "Remote medical consultation improving healthcare access"
+    ],
+    "correct": 3,
+    "explanation": "Telemedicine uses networks for remote care, especially rural access."
+  },
+  {
+    "id": 98,
+    "lecture": "Lecture 2",
+    "question": "Response time differs from transmit time because response time measures:",
+    "options": [
+      "One-way propagation delay only",
+      "Fiber core diameter",
+      "Cable attenuation rate",
+      "Elapsed time between inquiry and response"
+    ],
+    "correct": 3,
+    "explanation": "Response time is round-trip service delay; transmit time is one-way message travel."
+  },
+  {
+    "id": 99,
+    "lecture": "Lecture 2",
+    "question": "Bus topology failure of backbone cable can:",
+    "options": [
+      "Increase PAN range",
+      "Improve security automatically",
+      "Disable entire network segment",
+      "Force Layer 7 translation"
+    ],
+    "correct": 2,
+    "explanation": "Shared backbone failure isolates all bus-attached devices."
+  },
+  {
+    "id": 100,
+    "lecture": "Lecture 2",
+    "question": "Star topology uses central hub/switch to:",
+    "options": [
+      "Eliminate all cables",
+      "Amplify only Layer 7 payloads",
+      "Mandate WAN routing",
+      "Forward traffic and reduce collisions versus bus"
+    ],
+    "correct": 3,
+    "explanation": "Central device manages traffic flow in star topology."
+  },
+  {
+    "id": 101,
+    "lecture": "Lecture 3",
+    "question": "Guided transmission media are characterized by:",
+    "options": [
+      "MAC tables stored in switches",
+      "Antenna-only air transmission without path",
+      "Physical cables providing a fixed propagation path for signals",
+      "Application layer protocol bundles"
+    ],
+    "correct": 2,
+    "explanation": "Guided media use twisted pair, coax, fiber with defined physical paths."
+  },
+  {
+    "id": 102,
+    "lecture": "Lecture 3",
+    "question": "Unguided media transmit through:",
+    "options": [
+      "Only copper twisted pairs",
+      "Air, vacuum, or water using antennas",
+      "Only coaxial shields",
+      "Only fiber optic cores"
+    ],
+    "correct": 1,
+    "explanation": "Unguided/wireless uses electromagnetic radiation without physical guide."
+  },
+  {
+    "id": 103,
+    "lecture": "Lecture 3",
+    "question": "UTP stands for:",
+    "options": [
+      "Universal Transmission Protocol",
+      "Unshielded Twisted Pair",
+      "Unregulated Thermal Pathway",
+      "Unified Transport Packet"
+    ],
+    "correct": 1,
+    "explanation": "UTP is Unshielded Twisted Pair—common in LANs/Ethernet."
+  },
+  {
+    "id": 104,
+    "lecture": "Lecture 3",
+    "question": "STP provides over UTP:",
+    "options": [
+      "Immunity to all noise types including impulse",
+      "Better protection from electromagnetic interference via shielding",
+      "Application layer encryption by default",
+      "Lower cost and easier long-distance reach than fiber"
+    ],
+    "correct": 1,
+    "explanation": "STP adds shielding beyond twisting for interference protection."
+  },
+  {
+    "id": 105,
+    "lecture": "Lecture 3",
+    "question": "Twisted pair reduces interference primarily by:",
+    "options": [
+      "Using light pulses instead of electricity",
+      "Eliminating the need for repeaters always",
+      "Operating only at microwave frequencies",
+      "Pair twisting canceling crosstalk between wires"
+    ],
+    "correct": 3,
+    "explanation": "Twisting pairs helps cancel electromagnetic interference and crosstalk."
+  },
+  {
+    "id": 106,
+    "lecture": "Lecture 3",
+    "question": "Coaxial cable structure includes:",
+    "options": [
+      "Only infrared LED transmitters",
+      "Central conductor, insulation, metallic shield, and outer cover",
+      "Only glass core and cladding",
+      "Only single unshielded wire"
+    ],
+    "correct": 1,
+    "explanation": "Coax has inner conductor, dielectric, shield, and jacket."
+  },
+  {
+    "id": 107,
+    "lecture": "Lecture 3",
+    "question": "Coaxial is used in lecture for:",
+    "options": [
+      "Only gateway protocol translation",
+      "Only PAN Bluetooth headsets",
+      "Cable TV and broadband internet",
+      "Only OSI session management"
+    ],
+    "correct": 2,
+    "explanation": "Coax serves cable TV and broadband per transmission media lecture."
+  },
+  {
+    "id": 108,
+    "lecture": "Lecture 3",
+    "question": "Fiber optic transmits data using:",
+    "options": [
+      "Sound waves in air ducts",
+      "Light pulses through glass or plastic fibers",
+      "Electrical voltage on copper pairs only",
+      "Hub broadcast electrical floods"
+    ],
+    "correct": 1,
+    "explanation": "Fiber uses light pulses, enabling high speed and EMI immunity."
+  },
+  {
+    "id": 109,
+    "lecture": "Lecture 3",
+    "question": "Single-mode fiber differs from multi-mode because single-mode:",
+    "options": [
+      "Is always cheaper to install than UTP",
+      "Has larger core causing multiple paths and shorter reach",
+      "Uses radio waves instead of light",
+      "Allows one straight light path for longer distance and less dispersion"
+    ],
+    "correct": 3,
+    "explanation": "Single-mode: one path, lower loss, longer distance; multi-mode: multiple paths, dispersion limits distance."
+  },
+  {
+    "id": 110,
+    "lecture": "Lecture 3",
+    "question": "Multi-mode fiber limitation emphasized is:",
+    "options": [
+      "Complete immunity to all latency",
+      "Mandatory use only in PAN",
+      "Dispersion from multiple light paths limiting distance",
+      "Inability to carry any digital data"
+    ],
+    "correct": 2,
+    "explanation": "Multiple modes cause dispersion, restricting distance compared to single-mode."
+  },
+  {
+    "id": 111,
+    "lecture": "Lecture 3",
+    "question": "Fiber optic advantage over copper includes:",
+    "options": [
+      "Passes through all walls like radio",
+      "Lowest installation cost always",
+      "Immunity to electromagnetic interference",
+      "Best mobility for roaming users"
+    ],
+    "correct": 2,
+    "explanation": "Fiber is immune to EMI and offers high bandwidth/security."
+  },
+  {
+    "id": 112,
+    "lecture": "Lecture 3",
+    "question": "Fiber optic disadvantage cited:",
+    "options": [
+      "High initial cost and skilled installation required",
+      "Inability to support ISP backbones",
+      "Maximum range under 10 meters always",
+      "Extreme susceptibility to crosstalk"
+    ],
+    "correct": 0,
+    "explanation": "Fiber costs more and needs skilled installers despite performance benefits."
+  },
+  {
+    "id": 113,
+    "lecture": "Lecture 3",
+    "question": "For high electrical interference environments (factories, mining), lecture recommends:",
+    "options": [
+      "Unshielded twisted pair only",
+      "Fiber optic",
+      "Infrared remote controls",
+      "Passive hubs exclusively"
+    ],
+    "correct": 1,
+    "explanation": "Fiber avoids EMI; ideal for interference-heavy industrial sites."
+  },
+  {
+    "id": 114,
+    "lecture": "Lecture 3",
+    "question": "High data traffic such as video streaming and cloud systems should prefer:",
+    "options": [
+      "Infrared remote links",
+      "Unshielded telephone wire only",
+      "Simplex keyboard cables",
+      "Fiber optic"
+    ],
+    "correct": 3,
+    "explanation": "High bandwidth needs point to fiber for speed/capacity."
+  },
+  {
+    "id": 115,
+    "lecture": "Lecture 3",
+    "question": "Normal office or school networking often uses:",
+    "options": [
+      "Multi-mode fiber to every desk exclusively",
+      "Microwave point-to-point only",
+      "Satellite-only uplinks",
+      "Twisted pair (UTP)"
+    ],
+    "correct": 3,
+    "explanation": "UTP is affordable and adequate for typical office/school LAN needs."
+  },
+  {
+    "id": 116,
+    "lecture": "Lecture 3",
+    "question": "Short distances within a building favor:",
+    "options": [
+      "Satellite communication primarily",
+      "WAN leased lines exclusively",
+      "UTP or Wi-Fi",
+      "Only multi-mode across continents"
+    ],
+    "correct": 2,
+    "explanation": "Inside buildings, UTP wired or Wi-Fi wireless suit short spans."
+  },
+  {
+    "id": 117,
+    "lecture": "Lecture 3",
+    "question": "Long distances across campus, city, or country favor:",
+    "options": [
+      "PAN Bluetooth only",
+      "Fiber optic or microwave",
+      "Infrared remote controls",
+      "UTP Cat3 without repeaters"
+    ],
+    "correct": 1,
+    "explanation": "Long spans need fiber backbones or microwave links."
+  },
+  {
+    "id": 118,
+    "lecture": "Lecture 3",
+    "question": "Low budget installations typically choose:",
+    "options": [
+      "Dedicated satellite networks",
+      "Microwave towers exclusively",
+      "Twisted pair cables",
+      "Full mesh fiber to every node"
+    ],
+    "correct": 2,
+    "explanation": "Copper twisted pair is lowest cost wired option cited."
+  },
+  {
+    "id": 119,
+    "lecture": "Lecture 3",
+    "question": "High security requirement environments prefer:",
+    "options": [
+      "Unshielded copper in public areas",
+      "Hub-based shared collision domains",
+      "Open Wi-Fi without encryption",
+      "Fiber optic (harder to tap)"
+    ],
+    "correct": 3,
+    "explanation": "Fiber is harder to tap; wired preferred over wireless for security."
+  },
+  {
+    "id": 120,
+    "lecture": "Lecture 3",
+    "question": "Mobility needs for phones and laptops favor:",
+    "options": [
+      "Simplex fiber downlinks only",
+      "Coaxial TV distribution only",
+      "Wireless media (radio/Wi-Fi)",
+      "Fixed UTP to each seat only"
+    ],
+    "correct": 2,
+    "explanation": "Wireless supports user movement; wired suits fixed workstations."
+  },
+  {
+    "id": 121,
+    "lecture": "Lecture 3",
+    "question": "Attenuation refers to:",
+    "options": [
+      "Protocol header encapsulation",
+      "Loss of signal strength as distance increases",
+      "MAC address duplication",
+      "Increase of bandwidth with cable length"
+    ],
+    "correct": 1,
+    "explanation": "Attenuation is signal weakening over distance; lower is better for long links."
+  },
+  {
+    "id": 122,
+    "lecture": "Lecture 3",
+    "question": "Media with lowest attenuation for long distance per lecture:",
+    "options": [
+      "Fiber optic",
+      "Bluetooth PAN",
+      "Infrared LED",
+      "Unshielded twisted pair"
+    ],
+    "correct": 0,
+    "explanation": "Fiber covers longest distance with lower attenuation than copper."
+  },
+  {
+    "id": 123,
+    "lecture": "Lecture 3",
+    "question": "Wired media are generally __ compared to wireless for tapping/interception:",
+    "options": [
+      "Less secure always",
+      "More secure (harder to intercept)",
+      "Identical in all environments",
+      "Unrelated to security policy"
+    ],
+    "correct": 1,
+    "explanation": "Wired generally more secure; wireless more exposed to interception."
+  },
+  {
+    "id": 124,
+    "lecture": "Lecture 3",
+    "question": "Wireless installation advantage:",
+    "options": [
+      "Always highest bandwidth vs fiber",
+      "Longest range without line-of-sight",
+      "Easier deployment where cabling is impractical",
+      "Zero interference vulnerability"
+    ],
+    "correct": 2,
+    "explanation": "Wireless eases install in open or hard-to-cable areas."
+  },
+  {
+    "id": 125,
+    "lecture": "Lecture 3",
+    "question": "Radio waves frequency range cited (~3 kHz–1 GHz) are used in:",
+    "options": [
+      "Only coaxial center conductors",
+      "Only fiber optic cores",
+      "Wi-Fi, Bluetooth, and radio broadcasting",
+      "Only TCP transport layer"
+    ],
+    "correct": 2,
+    "explanation": "Radio waves support Wi-Fi, Bluetooth, broadcasting per lecture."
+  },
+  {
+    "id": 126,
+    "lecture": "Lecture 3",
+    "question": "Radio waves can:",
+    "options": [
+      "Never suffer interference",
+      "Only travel in fiber cores",
+      "Pass through walls and buildings",
+      "Require strict line-of-sight always"
+    ],
+    "correct": 2,
+    "explanation": "Radio penetrates obstacles better than higher-frequency microwave/IR in many cases."
+  },
+  {
+    "id": 127,
+    "lecture": "Lecture 3",
+    "question": "Microwave frequency range cited is approximately:",
+    "options": [
+      "Only 2.4 kHz exactly",
+      "1 GHz to 300 GHz",
+      "3 Hz to 3 kHz",
+      "400 THz to 500 THz"
+    ],
+    "correct": 1,
+    "explanation": "Microwaves span ~1 GHz–300 GHz for satellite and point-to-point links."
+  },
+  {
+    "id": 128,
+    "lecture": "Lecture 3",
+    "question": "Microwave links require:",
+    "options": [
+      "Only hub broadcast topology",
+      "Only underground fiber ducts",
+      "Line-of-sight between antennas",
+      "No alignment or planning"
+    ],
+    "correct": 2,
+    "explanation": "Microwave needs clear line-of-sight for point-to-point communication."
+  },
+  {
+    "id": 129,
+    "lecture": "Lecture 3",
+    "question": "Microwave disadvantage includes:",
+    "options": [
+      "Weather effects such as rain fade",
+      "Mandatory use only inside LAN closets",
+      "Complete inability to carry data",
+      "Zero latency always"
+    ],
+    "correct": 0,
+    "explanation": "Rain fade and weather can degrade microwave signals."
+  },
+  {
+    "id": 130,
+    "lecture": "Lecture 3",
+    "question": "Infrared frequency range cited is approximately:",
+    "options": [
+      "Only 802.11ax band",
+      "1 GHz to 300 GHz",
+      "3 kHz to 1 GHz",
+      "300 GHz to 400 THz"
+    ],
+    "correct": 3,
+    "explanation": "Infrared occupies ~300 GHz–400 THz for short-range IR communication."
+  },
+  {
+    "id": 131,
+    "lecture": "Lecture 3",
+    "question": "Infrared cannot:",
+    "options": [
+      "Penetrate obstacles; requires line-of-sight",
+      "Be used in remote controls",
+      "Provide short-range links",
+      "Operate in confined spaces securely"
+    ],
+    "correct": 0,
+    "explanation": "IR does not pass through obstacles; needs direct line-of-sight."
+  },
+  {
+    "id": 132,
+    "lecture": "Lecture 3",
+    "question": "Satellite communication disadvantage emphasized:",
+    "options": [
+      "Requirement for UTP to each user",
+      "Inability to cover wide areas",
+      "Immunity to all weather",
+      "High cost and signal latency (delay)"
+    ],
+    "correct": 3,
+    "explanation": "Satellites cost more and introduce propagation delay/latency."
+  },
+  {
+    "id": 133,
+    "lecture": "Lecture 3",
+    "question": "Satellite communication advantage:",
+    "options": [
+      "Very wide geographic coverage where cables impractical",
+      "Best for PAN headphone links",
+      "Cheapest per-bit cost always",
+      "Lowest latency for gaming"
+    ],
+    "correct": 0,
+    "explanation": "Satellites cover remote/vast areas where cabling is impractical."
+  },
+  {
+    "id": 134,
+    "lecture": "Lecture 3",
+    "question": "Reasons for wireless technology include temporary installations and:",
+    "options": [
+      "Replacement of all fiber backbones",
+      "Mandatory elimination of all protocols",
+      "Exclusive use in data link layer only",
+      "People who move within or travel outside work environments"
+    ],
+    "correct": 3,
+    "explanation": "Wireless suits mobility, temporary sites, and impossible/inconvenient cabling."
+  },
+  {
+    "id": 135,
+    "lecture": "Lecture 3",
+    "question": "Choosing media depends on bandwidth, distance, cost, environment, security, reliability, and:",
+    "options": [
+      "Mobility and future expansion needs",
+      "Only cable jacket color",
+      "Only MAC OUI vendor",
+      "Only OSI layer count"
+    ],
+    "correct": 0,
+    "explanation": "Selection weighs mobility, growth, interference, and operational factors."
+  },
+  {
+    "id": 136,
+    "lecture": "Lecture 3",
+    "question": "Expecting network growth and higher future data needs suggests:",
+    "options": [
+      "Cat3 telephone wire only",
+      "Fiber optic investment",
+      "Infrared remotes exclusively",
+      "Passive hub LANs"
+    ],
+    "correct": 1,
+    "explanation": "Fiber supports future bandwidth expansion per lecture guidance."
+  },
+  {
+    "id": 137,
+    "lecture": "Lecture 3",
+    "question": "Stable indoor environments with low interference often use:",
+    "options": [
+      "Microwave towers",
+      "UTP",
+      "Satellite downlinks",
+      "Multi-hop mesh only"
+    ],
+    "correct": 1,
+    "explanation": "UTP suffices in stable indoor low-interference settings."
+  },
+  {
+    "id": 138,
+    "lecture": "Lecture 3",
+    "question": "Interference-prone areas should use:",
+    "options": [
+      "Open microwave without planning",
+      "Unshielded copper only",
+      "Shielded cables or fiber",
+      "Hub-based bus always"
+    ],
+    "correct": 2,
+    "explanation": "Shielding or fiber mitigates interference in noisy environments."
+  },
+  {
+    "id": 139,
+    "lecture": "Lecture 3",
+    "question": "Reliability ranking emphasized places __ as most reliable:",
+    "options": [
+      "Unshielded copper in factories",
+      "Infrared through walls",
+      "Consumer radio only",
+      "Fiber optic"
+    ],
+    "correct": 3,
+    "explanation": "Fiber transmits consistently with minimal errors—most reliable medium cited."
+  },
+  {
+    "id": 140,
+    "lecture": "Lecture 3",
+    "question": "Copper twisted pair disadvantages include:",
+    "options": [
+      "Higher cost than satellite always",
+      "Limited distance/speed and EMI susceptibility",
+      "Complete immunity to noise",
+      "Longest global reach without regeneration"
+    ],
+    "correct": 1,
+    "explanation": "UTP is cheap but distance/speed limited and EMI-sensitive."
+  },
+  {
+    "id": 141,
+    "lecture": "Lecture 3",
+    "question": "Coax advantages over twisted pair include:",
+    "options": [
+      "Higher bandwidth and less noise/interference",
+      "Lowest cost and easiest fiber replacement",
+      "Use only in PAN 10 m range",
+      "Immunity to all attenuation"
+    ],
+    "correct": 0,
+    "explanation": "Coax offers better shielding and bandwidth than basic twisted pair."
+  },
+  {
+    "id": 142,
+    "lecture": "Lecture 3",
+    "question": "Coax disadvantages include:",
+    "options": [
+      "Mandatory Layer 7 operation",
+      "Lower bandwidth than UTP always",
+      "Inability to carry broadband",
+      "More expensive, bulkier, harder to install than twisted pair"
+    ],
+    "correct": 3,
+    "explanation": "Coax is costlier and harder to install despite performance gains."
+  },
+  {
+    "id": 143,
+    "lecture": "Lecture 3",
+    "question": "UTP categories classify cables by:",
+    "options": [
+      "Performance, speed, and bandwidth capability",
+      "Only outer jacket color",
+      "OSI layer number",
+      "Only manufacturer country"
+    ],
+    "correct": 0,
+    "explanation": "UTP categories (Cat5e, Cat6, etc.) rate performance and bandwidth."
+  },
+  {
+    "id": 144,
+    "lecture": "Lecture 3",
+    "question": "Open or hard-to-cable areas should consider:",
+    "options": [
+      "Wireless (radio/microwave)",
+      "Simplex keyboard wiring",
+      "Trenching fiber to every desk only",
+      "Bus topology coax only"
+    ],
+    "correct": 0,
+    "explanation": "Wireless fits areas where physical cabling is difficult."
+  },
+  {
+    "id": 145,
+    "lecture": "Lecture 3",
+    "question": "Public access environments prefer wired over wireless primarily for:",
+    "options": [
+      "Elimination of all NICs",
+      "Mandatory half-duplex",
+      "Better security control vs open wireless exposure",
+      "Lower bandwidth always"
+    ],
+    "correct": 2,
+    "explanation": "Wired preferred in public settings due to wireless security concerns."
+  },
+  {
+    "id": 146,
+    "lecture": "Lecture 3",
+    "question": "Transmission speed in media characteristics depends on:",
+    "options": [
+      "Only application layer protocol names",
+      "Type of media used",
+      "Only star topology choice",
+      "Only de jure standard votes"
+    ],
+    "correct": 1,
+    "explanation": "Actual data rate varies by medium type and implementation."
+  },
+  {
+    "id": 147,
+    "lecture": "Lecture 3",
+    "question": "Noise and interference affect copper more than:",
+    "options": [
+      "UTP in shielded vault only",
+      "Fiber optic (minimal interference in glass light path)",
+      "Microwave only in vacuum",
+      "Satellite only in LAN closet"
+    ],
+    "correct": 1,
+    "explanation": "Fiber has minimal noise/interference vs copper cables."
+  },
+  {
+    "id": 148,
+    "lecture": "Lecture 3",
+    "question": "Flexibility and mobility are highest for:",
+    "options": [
+      "Coaxial cable TV drops only",
+      "Wireless media",
+      "Fixed UTP desktop wiring",
+      "Underground fiber only"
+    ],
+    "correct": 1,
+    "explanation": "Wireless enables device movement; wired is fixed workstation oriented."
+  },
+  {
+    "id": 149,
+    "lecture": "Lecture 3",
+    "question": "Fixed workstations without mobility needs should use:",
+    "options": [
+      "Wired connections (typically twisted pair or fiber)",
+      "Satellite dishes at each desk",
+      "Infrared across buildings",
+      "Only multipoint bus without medium"
+    ],
+    "correct": 0,
+    "explanation": "Fixed users benefit from reliable wired links."
+  },
+  {
+    "id": 150,
+    "lecture": "Lecture 3",
+    "question": "Small stable networks with modest needs may remain on:",
+    "options": [
+      "Twisted pair infrastructure",
+      "Microwave city rings only",
+      "Global satellite backbone exclusively",
+      "Multi-mode transcontinental fiber mandatory"
+    ],
+    "correct": 0,
+    "explanation": "Small stable networks can stay on cost-effective twisted pair."
+  },
+  {
+    "id": 151,
+    "lecture": "Lecture 4",
+    "question": "The OSI model has how many layers?",
+    "options": [
+      "7",
+      "3",
+      "5",
+      "4"
+    ],
+    "correct": 0,
+    "explanation": "OSI is a seven-layer reference model for network communication."
+  },
+  {
+    "id": 152,
+    "lecture": "Lecture 4",
+    "question": "The TCP/IP model has how many layers?",
+    "options": [
+      "2",
+      "4",
+      "5",
+      "7"
+    ],
+    "correct": 1,
+    "explanation": "TCP/IP uses four layers: link, internet, transport, application."
+  },
+  {
+    "id": 153,
+    "lecture": "Lecture 4",
+    "question": "OSI Layer 7 is the:",
+    "options": [
+      "Application layer",
+      "Physical layer",
+      "Data link layer",
+      "Network layer"
+    ],
+    "correct": 0,
+    "explanation": "Layer 7 Application provides network services to user applications."
+  },
+  {
+    "id": 154,
+    "lecture": "Lecture 4",
+    "question": "OSI Layer 1 is the:",
+    "options": [
+      "Session layer",
+      "Transport layer",
+      "Presentation layer",
+      "Physical layer"
+    ],
+    "correct": 3,
+    "explanation": "Layer 1 Physical handles bit transmission over physical medium."
+  },
+  {
+    "id": 155,
+    "lecture": "Lecture 4",
+    "question": "OSI Layer 3 is the:",
+    "options": [
+      "Physical layer",
+      "Application layer",
+      "Network layer",
+      "Data link layer"
+    ],
+    "correct": 2,
+    "explanation": "Layer 3 Network handles routing and logical addressing."
+  },
+  {
+    "id": 156,
+    "lecture": "Lecture 4",
+    "question": "OSI Layer 2 is the:",
+    "options": [
+      "Transport layer",
+      "Session layer",
+      "Network layer",
+      "Data link layer"
+    ],
+    "correct": 3,
+    "explanation": "Layer 2 Data Link handles framing and MAC addressing."
+  },
+  {
+    "id": 157,
+    "lecture": "Lecture 4",
+    "question": "OSI Layer 4 is the:",
+    "options": [
+      "Presentation layer",
+      "Transport layer",
+      "Physical layer",
+      "Application layer"
+    ],
+    "correct": 1,
+    "explanation": "Layer 4 Transport ensures end-to-end delivery (TCP/UDP)."
+  },
+  {
+    "id": 158,
+    "lecture": "Lecture 4",
+    "question": "OSI Layer 5 is the:",
+    "options": [
+      "Data link layer",
+      "Session layer",
+      "Network layer",
+      "Physical layer"
+    ],
+    "correct": 1,
+    "explanation": "Layer 5 Session manages dialog control and synchronization."
+  },
+  {
+    "id": 159,
+    "lecture": "Lecture 4",
+    "question": "OSI Layer 6 is the:",
+    "options": [
+      "Presentation layer",
+      "Network layer",
+      "Transport layer",
+      "Session layer"
+    ],
+    "correct": 0,
+    "explanation": "Layer 6 Presentation handles translation, encryption, compression."
+  },
+  {
+    "id": 160,
+    "lecture": "Lecture 4",
+    "question": "TCP/IP Application layer corresponds to OSI layers:",
+    "options": [
+      "Only layer 4",
+      "3 and 4 only",
+      "5, 6, and 7 (Session, Presentation, Application)",
+      "1 and 2 only"
+    ],
+    "correct": 2,
+    "explanation": "TCP/IP application layer maps to OSI top three layers."
+  },
+  {
+    "id": 161,
+    "lecture": "Lecture 4",
+    "question": "TCP/IP Network Interface layer corresponds to OSI:",
+    "options": [
+      "Layers 5–7",
+      "Layer 3 only",
+      "Layers 3 and 4",
+      "Layers 1 and 2 (Physical and Data Link)"
+    ],
+    "correct": 3,
+    "explanation": "TCP/IP link/interface combines OSI physical and data link."
+  },
+  {
+    "id": 162,
+    "lecture": "Lecture 4",
+    "question": "TCP/IP Internet layer corresponds primarily to OSI:",
+    "options": [
+      "Network layer (Layer 3)",
+      "Physical layer",
+      "Session layer",
+      "Application layer"
+    ],
+    "correct": 0,
+    "explanation": "TCP/IP internet layer aligns with OSI network layer routing/addressing."
+  },
+  {
+    "id": 163,
+    "lecture": "Lecture 4",
+    "question": "TCP/IP Transport layer aligns with OSI:",
+    "options": [
+      "Presentation layer",
+      "Physical layer",
+      "Data link layer",
+      "Transport layer (Layer 4)"
+    ],
+    "correct": 3,
+    "explanation": "Both models have transport layer for end-to-end communication."
+  },
+  {
+    "id": 164,
+    "lecture": "Lecture 4",
+    "question": "OSI was developed by:",
+    "options": [
+      "IEEE only without ISO",
+      "Microsoft exclusively",
+      "ARPANET exclusively alone",
+      "ISO (International Organization for Standardization)"
+    ],
+    "correct": 3,
+    "explanation": "OSI is an ISO international standard reference model."
+  },
+  {
+    "id": 165,
+    "lecture": "Lecture 4",
+    "question": "TCP/IP was developed in context of:",
+    "options": [
+      "ARPANET / Internet evolution",
+      "ISO 1984 formal vote only",
+      "Bluetooth SIG",
+      "Coaxial TV standards only"
+    ],
+    "correct": 0,
+    "explanation": "TCP/IP emerged from ARPANET research leading to Internet."
+  },
+  {
+    "id": 166,
+    "lecture": "Lecture 4",
+    "question": "OSI model is classified as a:",
+    "options": [
+      "Reference model",
+      "Specific protocol suite implementation only",
+      "Physical cable standard",
+      "MAC address format"
+    ],
+    "correct": 0,
+    "explanation": "OSI is reference framework, not a protocol implementation itself."
+  },
+  {
+    "id": 167,
+    "lecture": "Lecture 4",
+    "question": "TCP/IP model is classified as a:",
+    "options": [
+      "Only Layer 1 specification",
+      "Pure reference without protocols",
+      "Protocol model (describes TCP/IP suite functions)",
+      "Only Ethernet 802.3 document"
+    ],
+    "correct": 2,
+    "explanation": "TCP/IP model maps closely to actual TCP/IP protocol suite."
+  },
+  {
+    "id": 168,
+    "lecture": "Lecture 4",
+    "question": "Reference models primarily aim to:",
+    "options": [
+      "Specify exact cable pinouts only",
+      "Aid understanding of functions/processes without implementation detail",
+      "Replace all vendor hardware",
+      "Eliminate need for protocols"
+    ],
+    "correct": 1,
+    "explanation": "Reference models clarify concepts; protocol models match specific suites."
+  },
+  {
+    "id": 169,
+    "lecture": "Lecture 4",
+    "question": "Protocol models provide:",
+    "options": [
+      "Structure closely matching a particular protocol suite (e.g., TCP/IP)",
+      "No relation to real protocols",
+      "Only physical topology diagrams",
+      "Only OSI layer naming"
+    ],
+    "correct": 0,
+    "explanation": "Protocol models mirror real protocol stack organization."
+  },
+  {
+    "id": 170,
+    "lecture": "Lecture 4",
+    "question": "Layered architecture benefit: modification in one layer should:",
+    "options": [
+      "Not affect other layers due to independence/abstraction",
+      "Eliminate encapsulation",
+      "Merge all layers into one",
+      "Require rebuilding entire network hardware"
+    ],
+    "correct": 0,
+    "explanation": "Layer independence allows changes locally without breaking whole stack."
+  },
+  {
+    "id": 171,
+    "lecture": "Lecture 4",
+    "question": "Encapsulation in OSI means each layer:",
+    "options": [
+      "Ignores lower layer services",
+      "Removes all headers from sender",
+      "Only encrypts physical bits",
+      "Adds its own header/trailer to data from layer above"
+    ],
+    "correct": 3,
+    "explanation": "Encapsulation wraps data with layer-specific control information."
+  },
+  {
+    "id": 172,
+    "lecture": "Lecture 4",
+    "question": "OSI adoption as international standard occurred in:",
+    "options": [
+      "1984",
+      "1990 ARPANET shutdown year only",
+      "2000 exclusively",
+      "1973 only without adoption"
+    ],
+    "correct": 0,
+    "explanation": "ISO formally adopted OSI architecture in 1984 per lecture history."
+  },
+  {
+    "id": 173,
+    "lecture": "Lecture 4",
+    "question": "Initial OSI intent in 1983 was:",
+    "options": [
+      "Replacement of TCP/IP on January 1 1983",
+      "Detailed specification of actual interfaces",
+      "Only textbook publication without standardization",
+      "Elimination of physical layer"
+    ],
+    "correct": 1,
+    "explanation": "OSI began aiming at detailed interface specs before reference use evolved."
+  },
+  {
+    "id": 174,
+    "lecture": "Lecture 4",
+    "question": "TCP/IP paper by Cerf and Kahn published in:",
+    "options": [
+      "1969 ARPANET birth only",
+      "1990",
+      "1974",
+      "1984 ISO adoption year"
+    ],
+    "correct": 2,
+    "explanation": "1974 paper 'A Protocol for Packet Network Interconnection' described TCP/IP concepts."
+  },
+  {
+    "id": 175,
+    "lecture": "Lecture 4",
+    "question": "ARPANET switched from NCP to TCP/IP on:",
+    "options": [
+      "January 1, 1974",
+      "January 1, 1983",
+      "1984 ISO vote day",
+      "1990 shutdown day exclusively"
+    ],
+    "correct": 1,
+    "explanation": "January 1, 1983 marks ARPANET mandatory TCP/IP adoption."
+  },
+  {
+    "id": 176,
+    "lecture": "Lecture 4",
+    "question": "TCP is described as:",
+    "options": [
+      "Physical layer signal booster",
+      "Application layer gateway translator",
+      "Connection-oriented with reliability and sequencing",
+      "Connectionless only without ordering"
+    ],
+    "correct": 2,
+    "explanation": "TCP provides reliable, connection-oriented delivery with ordering and flow control."
+  },
+  {
+    "id": 177,
+    "lecture": "Lecture 4",
+    "question": "IPv4 provided approximately how many addressable devices per lecture?",
+    "options": [
+      "4.29 million unique addresses (32-bit)",
+      "128-bit unlimited flat count",
+      "4.3 billion devices",
+      "256 addresses only"
+    ],
+    "correct": 0,
+    "explanation": "IPv4 32-bit space supports roughly 4.29 billion addresses; lecture cites ~4.29 million unique devices in one passage (32-bit address space context)."
+  },
+  {
+    "id": 178,
+    "lecture": "Lecture 4",
+    "question": "IPv6 uses:",
+    "options": [
+      "32-bit addresses only",
+      "48-bit MAC as IP",
+      "128-bit network addresses",
+      "16-bit addresses"
+    ],
+    "correct": 2,
+    "explanation": "IPv6 expands to 128-bit addressing for vastly more devices."
+  },
+  {
+    "id": 179,
+    "lecture": "Lecture 4",
+    "question": "OSI follows a __ approach; TCP/IP follows a __ approach per comparison table:",
+    "options": [
+      "Circular; linear",
+      "Vertical; horizontal",
+      "Horizontal; vertical",
+      "Mesh; bus"
+    ],
+    "correct": 1,
+    "explanation": "Comparison table states OSI vertical vs TCP/IP horizontal approach."
+  },
+  {
+    "id": 180,
+    "lecture": "Lecture 4",
+    "question": "OSI transport layer is described as:",
+    "options": [
+      "Connectionless only always",
+      "Connection-oriented only",
+      "Both connection-oriented and connectionless",
+      "Physical signal only"
+    ],
+    "correct": 1,
+    "explanation": "OSI model presents transport as connection-oriented; TCP/IP transport includes both TCP and UDP modes."
+  },
+  {
+    "id": 181,
+    "lecture": "Lecture 4",
+    "question": "TCP/IP transport layer supports:",
+    "options": [
+      "Both connection-oriented (TCP) and connectionless (UDP) behavior",
+      "Only session synchronization",
+      "Connection-oriented only with no UDP",
+      "Neither mode; only routing"
+    ],
+    "correct": 0,
+    "explanation": "TCP/IP transport layer encompasses TCP (connection-oriented) and UDP (connectionless)."
+  },
+  {
+    "id": 182,
+    "lecture": "Lecture 4",
+    "question": "Session and presentation layers exist in:",
+    "options": [
+      "TCP/IP but not OSI",
+      "OSI but not in TCP/IP model",
+      "Neither model",
+      "Ethernet model only"
+    ],
+    "correct": 1,
+    "explanation": "TCP/IP collapses session/presentation into application layer."
+  },
+  {
+    "id": 183,
+    "lecture": "Lecture 4",
+    "question": "OSI clearly distinguishes:",
+    "options": [
+      "Only topology shapes",
+      "Only cable types",
+      "Services, interfaces, and protocols",
+      "Only PAN range"
+    ],
+    "correct": 2,
+    "explanation": "OSI separates services, interfaces, protocols; TCP/IP lacks such crisp distinctions."
+  },
+  {
+    "id": 184,
+    "lecture": "Lecture 4",
+    "question": "Chronology comparison: OSI was defined __ the advent of the Internet per lecture table:",
+    "options": [
+      "Simultaneously with January 1983 only",
+      "After",
+      "Before",
+      "Never related temporally"
+    ],
+    "correct": 1,
+    "explanation": "Table notes OSI defined after Internet advent; TCP/IP before/with Internet growth."
+  },
+  {
+    "id": 185,
+    "lecture": "Lecture 4",
+    "question": "Layered tasks aim to divide design into:",
+    "options": [
+      "Small pieces with each layer adding services upward",
+      "Physical cables only",
+      "One monolithic program only",
+      "Application GUIs only"
+    ],
+    "correct": 0,
+    "explanation": "Layering splits functionality into manageable modules building services upward."
+  },
+  {
+    "id": 186,
+    "lecture": "Lecture 4",
+    "question": "Modularity in layered architecture enables:",
+    "options": [
+      "Elimination of standards",
+      "Independent implementation, testing, and fault isolation per layer",
+      "Removal of all headers",
+      "Mandatory single-vendor hardware"
+    ],
+    "correct": 1,
+    "explanation": "Modularity supports independent layer development and easier debugging."
+  },
+  {
+    "id": 187,
+    "lecture": "Lecture 4",
+    "question": "Standardization benefit of layered architecture:",
+    "options": [
+      "Elimination of TCP/IP",
+      "Mandatory analog signaling",
+      "Proprietary lock-in only",
+      "Interoperability between diverse devices and protocols"
+    ],
+    "correct": 3,
+    "explanation": "Standard layers enable heterogeneous interoperability."
+  },
+  {
+    "id": 188,
+    "lecture": "Lecture 4",
+    "question": "Abstraction in layered architecture allows developers to:",
+    "options": [
+      "Disable encapsulation",
+      "Ignore all protocols entirely",
+      "Merge layers 1–7 into NIC firmware only",
+      "Work on one layer without lower-layer implementation details"
+    ],
+    "correct": 3,
+    "explanation": "Upper layers use services without knowing lower-layer internals."
+  },
+  {
+    "id": 189,
+    "lecture": "Lecture 4",
+    "question": "Flexibility of layered architecture allows:",
+    "options": [
+      "Only physical layer updates",
+      "Adding new services at appropriate layer without disrupting others",
+      "Elimination of network layer",
+      "No future protocol changes ever"
+    ],
+    "correct": 1,
+    "explanation": "New functionality can be inserted at suitable layer as networks evolve."
+  },
+  {
+    "id": 190,
+    "lecture": "Lecture 4",
+    "question": "OSI disadvantage cited includes:",
+    "options": [
+      "Lack of international recognition",
+      "No encapsulation support",
+      "Too few layers to model networks",
+      "Complexity and implementation difficulty in large networks"
+    ],
+    "correct": 3,
+    "explanation": "OSI can be complex with overhead and inconsistent vendor implementations."
+  },
+  {
+    "id": 191,
+    "lecture": "Lecture 4",
+    "question": "OSI advantage cited includes:",
+    "options": [
+      "Replacement of all physical media",
+      "Elimination of all security needs",
+      "Improved troubleshooting via layer separation",
+      "Guaranteed zero overhead"
+    ],
+    "correct": 2,
+    "explanation": "Layer separation aids diagnosing where failures occur."
+  },
+  {
+    "id": 192,
+    "lecture": "Lecture 4",
+    "question": "TCP/IP advantage cited includes:",
+    "options": [
+      "Wide adoption, simplicity relative to OSI, scalability, interoperability",
+      "Seven-layer strict enforcement",
+      "Zero security vulnerabilities",
+      "No protocol complexity at all"
+    ],
+    "correct": 0,
+    "explanation": "TCP/IP is Internet foundation—simple, scalable, widely adopted."
+  },
+  {
+    "id": 193,
+    "lecture": "Lecture 4",
+    "question": "TCP/IP disadvantage cited includes:",
+    "options": [
+      "Security vulnerabilities and complexity with many protocols/standards",
+      "Cannot support IP addressing",
+      "Too few layers to describe Internet",
+      "No scalability ever"
+    ],
+    "correct": 0,
+    "explanation": "TCP/IP faces security threats and complexity as Internet grows."
+  },
+  {
+    "id": 194,
+    "lecture": "Lecture 4",
+    "question": "OSI is NOT a protocol; it is:",
+    "options": [
+      "The TCP header specification",
+      "A cable category standard",
+      "The Ethernet frame format",
+      "A model for understanding/designing interoperable network architecture"
+    ],
+    "correct": 3,
+    "explanation": "OSI is conceptual reference model, not executable protocol."
+  },
+  {
+    "id": 195,
+    "lecture": "Lecture 4",
+    "question": "Lower OSI layers (1–3) devices from lecture/chapter context include:",
+    "options": [
+      "Only application servers",
+      "Only fiber cables without devices",
+      "Gateway only at all three",
+      "Repeater/hub (L1), switch/bridge (L2), router (L3)"
+    ],
+    "correct": 3,
+    "explanation": "Repeaters/hubs L1; switches/bridges L2; routers L3."
+  },
+  {
+    "id": 196,
+    "lecture": "Lecture 4",
+    "question": "Hierarchical OSI structure means:",
+    "options": [
+      "Higher layers transmit raw bits directly on cable",
+      "Only layer 7 communicates with layer 1",
+      "All layers are peers without ordering",
+      "Lower layers provide services to higher layers"
+    ],
+    "correct": 3,
+    "explanation": "OSI hierarchy stacks services upward from physical to application."
+  },
+  {
+    "id": 197,
+    "lecture": "Lecture 4",
+    "question": "Protocol independence in OSI means:",
+    "options": [
+      "Only TCP may be used",
+      "Only Ethernet may be used",
+      "Protocols are forbidden",
+      "Model does not mandate specific protocols at each layer"
+    ],
+    "correct": 3,
+    "explanation": "OSI defines framework; various protocols can implement each layer."
+  },
+  {
+    "id": 198,
+    "lecture": "Lecture 4",
+    "question": "TCP/IP internet layer uses predominantly:",
+    "options": [
+      "MAC addresses only for global routing",
+      "FTP for subnet masking",
+      "HTTP for packet forwarding",
+      "IP (Internet Protocol) for routing and addressing"
+    ],
+    "correct": 3,
+    "explanation": "IP operates at TCP/IP internet (network) layer for addressing/routing."
+  },
+  {
+    "id": 199,
+    "lecture": "Lecture 4",
+    "question": "Presentation layer responsibilities include:",
+    "options": [
+      "IP route discovery",
+      "MAC learning on switches",
+      "Data translation, encryption, and compression",
+      "Physical bit timing on cable"
+    ],
+    "correct": 2,
+    "explanation": "Presentation layer formats/transforms data for application consumption."
+  },
+  {
+    "id": 200,
+    "lecture": "Lecture 4",
+    "question": "Session layer responsibilities include:",
+    "options": [
+      "Electrical signal regeneration",
+      "Packet routing by IP",
+      "Frame switching by MAC",
+      "Dialog control and synchronization between applications"
+    ],
+    "correct": 3,
+    "explanation": "Session layer manages sessions—establishment, maintenance, synchronization."
+  }
+]
