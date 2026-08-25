@@ -615,6 +615,143 @@
     .powered-by-fixed span {
       color: rgba(255, 217, 61, 0.9);
     }
+
+    /* ── WRONG ANSWER POPUP ── */
+    .wrong-popup {
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(15, 12, 41, 0.85);
+      backdrop-filter: blur(10px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    .wrong-popup.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .wrong-popup-card {
+      width: 100%;
+      max-width: 480px;
+      background: linear-gradient(160deg, rgba(255, 107, 107, 0.12), rgba(30, 25, 60, 0.95));
+      border: 1px solid rgba(255, 107, 107, 0.4);
+      border-radius: 24px;
+      padding: 28px 24px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      animation: wrongPopIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes wrongPopIn {
+      from { transform: scale(0.85) translateY(20px); opacity: 0; }
+      to { transform: scale(1) translateY(0); opacity: 1; }
+    }
+
+    .wrong-popup-icon {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+    }
+
+    .wrong-popup-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .wrong-popup-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .wrong-popup-answer {
+      background: rgba(107, 203, 119, 0.12);
+      border: 2px solid rgba(107, 203, 119, 0.45);
+      border-radius: 16px;
+      padding: 16px 18px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+
+    .wrong-popup-answer-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent3);
+      margin-bottom: 8px;
+    }
+
+    .wrong-popup-answer-text {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .wrong-popup-letter {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #6bcb77, #95e1a3);
+      color: #1a1a2e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .wrong-popup-explanation {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: var(--text-muted);
+      text-align: left;
+      margin-bottom: 22px;
+    }
+
+    .wrong-popup-explanation strong {
+      display: block;
+      color: var(--text);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .btn-wrong-continue {
+      width: 100%;
+      padding: 16px;
+      border: none;
+      border-radius: 14px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      background: linear-gradient(135deg, #4d96ff, #c77dff);
+      color: white;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 6px 24px rgba(77, 150, 255, 0.35);
+    }
+
+    .btn-wrong-continue:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(199, 125, 255, 0.4);
+    }
   </style>
 </head>
 <body>
@@ -626,6 +763,26 @@
   </div>
 
   <div class="combo-popup" id="comboPopup"></div>
+
+  <div class="wrong-popup" id="wrongPopup">
+    <div class="wrong-popup-card">
+      <div class="wrong-popup-icon">❌</div>
+      <div class="wrong-popup-title">Not quite!</div>
+      <div class="wrong-popup-subtitle">Here's the correct answer so you can learn it</div>
+      <div class="wrong-popup-answer">
+        <div class="wrong-popup-answer-label">Correct Answer</div>
+        <div class="wrong-popup-answer-text">
+          <span class="wrong-popup-letter" id="wrongPopupLetter">A</span>
+          <span id="wrongPopupAnswer"></span>
+        </div>
+      </div>
+      <div class="wrong-popup-explanation">
+        <strong>Why?</strong>
+        <span id="wrongPopupExplanation"></span>
+      </div>
+      <button class="btn-wrong-continue" id="btnWrongContinue">Got it — Next Question →</button>
+    </div>
+  </div>
 
   <div class="transition-loader" id="transitionLoader">
     <div class="loader-card">
@@ -793,6 +950,18 @@
       }, TRANSITION_DELAY);
     }
 
+    function showWrongAnswerPopup(q) {
+      document.getElementById('wrongPopupLetter').textContent = LETTERS[q.correct];
+      document.getElementById('wrongPopupAnswer').textContent = q.options[q.correct];
+      document.getElementById('wrongPopupExplanation').textContent = q.explanation;
+      document.getElementById('wrongPopup').classList.add('active');
+    }
+
+    function dismissWrongPopup() {
+      document.getElementById('wrongPopup').classList.remove('active');
+      showTransitionLoader(nextQuestion);
+    }
+
     function skipTransition() {
       if (!transitionTimer) return;
       clearTimeout(transitionTimer);
@@ -804,6 +973,7 @@
 
     function renderQuestion() {
       answered = false;
+      document.getElementById('wrongPopup').classList.remove('active');
       const q = questions[currentIndex];
 
       document.getElementById('lectureTag').textContent = q.lecture;
@@ -840,9 +1010,9 @@
       allOptions.forEach(o => o.classList.add('disabled'));
 
       const fb = document.getElementById('feedback');
-      fb.classList.add('show');
 
       if (isCorrect) {
+        fb.classList.add('show');
         btnEl.classList.add('correct');
         score++;
         streak++;
@@ -858,23 +1028,23 @@
           showCombo(`${streak}x STREAK! 🔥`);
           confetti({ particleCount: 150, spread: 100, origin: { y: 0.5 } });
         }
+
+        document.getElementById('scoreDisplay').textContent = score;
+        document.getElementById('streakDisplay').textContent = streak;
+
+        setTimeout(() => {
+          showTransitionLoader(nextQuestion);
+        }, FEEDBACK_PAUSE);
       } else {
         btnEl.classList.add('wrong');
         allOptions[q.correct].classList.add('reveal-correct');
         streak = 0;
 
-        fb.classList.add('wrong-fb');
-        document.getElementById('feedbackTitle').textContent = '❌ Not quite!';
-        document.getElementById('feedbackBody').innerHTML =
-          `The correct answer is <strong>${LETTERS[q.correct]}. ${q.options[q.correct]}</strong><br><br>${q.explanation}`;
+        document.getElementById('scoreDisplay').textContent = score;
+        document.getElementById('streakDisplay').textContent = streak;
+
+        showWrongAnswerPopup(q);
       }
-
-      document.getElementById('scoreDisplay').textContent = score;
-      document.getElementById('streakDisplay').textContent = streak;
-
-      setTimeout(() => {
-        showTransitionLoader(nextQuestion);
-      }, FEEDBACK_PAUSE);
     }
 
     function nextQuestion() {
@@ -925,6 +1095,7 @@
     }
 
     document.getElementById('btnStart').addEventListener('click', startQuiz);
+    document.getElementById('btnWrongContinue').addEventListener('click', dismissWrongPopup);
     document.getElementById('transitionLoader').addEventListener('click', skipTransition);
     document.getElementById('btnRestart').addEventListener('click', () => {
       resultsScreen.classList.remove('active');
